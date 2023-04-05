@@ -14,3 +14,9 @@ HTML, CSS, Javascript.
 
 Maybe someday I'll write a shell script to optimize images, but that day is not today.
 
+### VS Code
+
+I searched for how to get automatic refresh on file changes and found this article: https://www.freecodecamp.org/news/vscode-live-server-auto-refresh-browser/
+
+VS Code has a Live Server extension :tada: It works great.
+
