@@ -1,0 +1,43 @@
+:root {
+    --color-bg-primary: rgb(52, 51, 52);
+    --color-bg-secondary: rgb(7,16,21);
+    --color-text: rgb(251, 246, 238);
+    --color-accent: rgb(242, 214, 163); 
+
+    /* @media (prefers-color-scheme: light) {
+        --color-bg-primary: rgb(251, 246, 238);
+        --color-bg-secondary: rgb(242, 214, 163);
+        --color-text: rgb(52, 51, 52);
+        --color-accent: rgb(7,16,21); 
+    } */
+}
+
+body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-accent);;
+    text-underline-offset: 0.15rem;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 0.05rem;
+}
+
+figure {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-accent);
+}
+
+svg {
+    fill: var(--color-bg-primary);
+    stroke: var(--color-accent);
+
+    .fade {
+        opacity: 0.5;
+    }
+    
+    .fade--light {
+        opacity: 0.2
+    }
+}
