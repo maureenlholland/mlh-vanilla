@@ -99,7 +99,15 @@ aside {
     color: var(--color-accent);
 }
 
-svg {
+.art-deco-bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.profile-pic {
     fill: var(--color-bg-primary);
     stroke: var(--color-accent);
     float: left;
@@ -122,7 +130,7 @@ svg {
 }
 
 @media (min-width: 500px) {
-    svg {
+    .profile-pic {
         float: none;
         margin-inline-end: initial;
         flex: 1 0 25%;
