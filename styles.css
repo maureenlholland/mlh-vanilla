@@ -7,6 +7,10 @@
 }
 
 :root {
+    --size-step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
+    --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
+    --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
+    --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
     --font-stack: 'Josefin Sans', sans-serif;
     --color-bg-primary: rgb(52, 51, 52);
     --color-bg-secondary: rgb(7,16,21);
@@ -25,12 +29,21 @@ body {
     background-color: var(--color-bg-primary);
     color: var(--color-text);
     font-family: var(--font-stack);
+    font-size: var(--size-step-0);
     line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
     font-weight: 700;
     line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--size-step-3);
+}
+
+h2 {
+    font-size: var(--size-step-2);
 }
 
 a {

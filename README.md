@@ -20,9 +20,19 @@ I searched for how to get automatic refresh on file changes and found this artic
 
 VS Code has a Live Server extension :tada: It works great.
 
-### Josefin Sans
+## Fonts
 
-I wanted to use a [variable font](https://web.dev/variable-fonts/) and luckily my favourite font, Josefin Sans, has a "Weight" axis: https://fonts.google.com/specimen/Josefin+Sans
+### Variable Font
 
-It has an SIL Open Font License (full text in the `/fonts/OFT.txt` file)
+I wanted to use a [variable font](https://web.dev/variable-fonts/) and luckily my favourite font, **Josefin Sans**, has a "Weight" axis: https://fonts.google.com/specimen/Josefin+Sans
+
+It has an SIL Open Font License (full text in the `/fonts/Josefin_Sans/OFL.txt` file)
+
+### Scale and Fluidity
+
+Helpful tips from from Set Studio's blog: https://set.studio/some-simple-ways-to-make-content-look-good/
+
+I finally used some sites I've had bookmarked forever:
+- https://typescale.com/ (I chose a Golden Ratio scale for desktop)
+- https://utopia.fyi/ (Reduce to Perfect Fourth scale for mobile, set min/max through clamp)
 
