@@ -6,7 +6,10 @@
 	font-weight: 100 700;
 }
 
+/* Utils */
 :root {
+    --line-length-max: 60ch;
+    --flow-space: 1em;
     --size-step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
     --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
     --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
@@ -25,6 +28,28 @@
     }
 }
 
+/* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
+.container {
+    width: min(100vw - 2rem, var(--container-max, var(--line-length-max)) );
+    margin-inline: auto;
+    padding-block-start: min(3rem, 10vh);
+    padding-block-end: min(3rem, 10vh);
+}
+
+.container--xl {
+    --container-max: max(1000px, var(--line-length-max));
+}
+
+/* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
+.flow > * + * {
+    margin-block-start: var(--flow-space);
+}
+
+:is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
+    --flow-space: 0.5em;
+}
+
+/* Elements */
 body {
     background-color: var(--color-bg-primary);
     color: var(--color-text);
@@ -35,15 +60,21 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1;
+}
+
+h1,
+h2 {
+    text-align: center;
 }
 
 h1 {
     font-size: var(--size-step-3);
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: var(--size-step-2);
+    font-size: var(--size-step-1);
 }
 
 a {
@@ -63,7 +94,7 @@ a:active {
     letter-spacing: 0.03rem;    
 }
 
-figure {
+aside {
     background-color: var(--color-bg-secondary);
     color: var(--color-accent);
 }
@@ -71,6 +102,10 @@ figure {
 svg {
     fill: var(--color-bg-primary);
     stroke: var(--color-accent);
+    float: left;
+    width: clamp(80px, 30%, 350px);
+    height: auto;
+    margin-inline-end: calc(var(--flow-space) * 0.5);
 
     .fade {
         opacity: 0.5;
@@ -78,5 +113,73 @@ svg {
     
     .fade--light {
         opacity: 0.2
+    }
+}
+
+.border--sm-screen {
+    border: 1px solid var(--color-text);
+    padding: var(--flow-space);
+}
+
+@media (min-width: 500px) {
+    svg {
+        float: none;
+        margin-inline-end: initial;
+        flex: 1 0 25%;
+        align-self: end;
+    }
+
+    .border--sm-screen {
+        border: none;
+    }
+
+    .border--md-lg-screen {
+        border: 1px solid var(--color-text);
+        padding: var(--flow-space);
+        flex: 0 1 var(--line-length-max);
+        align-self: center;
+    }
+
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        align-items: center;
+    }
+
+    .flex {
+        display: flex;
+        gap: var(--flow-space);
+    }
+}
+
+/* A pared-down version of Andy Bell's reset: https://andy-bell.co.uk/a-modern-css-reset/ */
+@layer reset {
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* Remove default margin */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+        margin: 0;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture {
+        max-width: 100%;
+        display: block;
     }
 }
