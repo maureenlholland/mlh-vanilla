@@ -1,8 +1,8 @@
 /* note: second src url is a fallback using legacy syntax */
 @font-face {
 	font-family: 'Josefin Sans';
-	src: url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype') tech('variations'),
-	     url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype-variations');
+	src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype') tech('variations'),
+	     url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype-variations');
 	font-weight: 100 700;
 }
 
@@ -94,11 +94,6 @@ a:active {
     letter-spacing: 0.03rem;    
 }
 
-aside {
-    background-color: var(--color-bg-secondary);
-    color: var(--color-accent);
-}
-
 blockquote + figcaption {
     font-weight: 100;
     text-align: right;
@@ -110,65 +105,6 @@ blockquote + figcaption {
     top: 0;
     bottom: 0;
     width: 100%;
-}
-
-.profile-pic {
-    fill: var(--color-bg-primary);
-    stroke: var(--color-accent);
-    float: left;
-    width: clamp(80px, 30%, 350px);
-    height: auto;
-    margin-inline-end: calc(var(--flow-space) * 0.5);
-
-    .fade {
-        opacity: 0.5;
-    }
-    
-    .fade--light {
-        opacity: 0.2
-    }
-}
-
-/* I like this better than using two images and one border/container */
-/* But I dislike re-declaring and resetting the styles... */
-.border--sm-screen {
-    background-color: var(--color-bg-primary);
-    border: 1px solid var(--color-text);
-    padding: var(--flow-space);
-}
-
-@media (min-width: 500px) {
-    .profile-pic {
-        float: none;
-        margin-inline-end: initial;
-        flex: 1 0 25%;
-        align-self: end;
-    }
-
-    .border--sm-screen {
-        border: initial;
-        background-color: initial;
-    }
-
-    .border--md-lg-screen {
-        background-color: var(--color-bg-primary);
-        border: 1px solid var(--color-text);
-        padding: var(--flow-space);
-        flex: 0 1 var(--line-length-max);
-        align-self: center;
-    }
-
-    body {
-        min-height: 100vh;
-        display: grid;
-        grid-template-rows: 1fr auto;
-        align-items: center;
-    }
-
-    .flex {
-        display: flex;
-        gap: var(--flow-space);
-    }
 }
 
 /* A pared-down version of Andy Bell's reset: https://andy-bell.co.uk/a-modern-css-reset/ */
