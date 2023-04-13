@@ -8,7 +8,7 @@
 
 /* Utils */
 :root {
-    --line-length-max: 60ch;
+    --line-length-max: 50ch;
     --flow-space: 1em;
     --size-step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
     --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
@@ -30,7 +30,7 @@
 
 /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
 .container {
-    width: min(100vw - 2rem, var(--container-max, var(--line-length-max)) );
+    width: min(100vw - 4rem, var(--container-max, var(--line-length-max)) );
     margin-inline: auto;
     padding-block-start: min(3rem, 10vh);
     padding-block-end: min(3rem, 10vh);
@@ -99,6 +99,11 @@ aside {
     color: var(--color-accent);
 }
 
+blockquote + figcaption {
+    font-weight: 100;
+    text-align: right;
+}
+
 .art-deco-bg {
     position: fixed;
     z-index: -1;
@@ -124,7 +129,10 @@ aside {
     }
 }
 
+/* I like this better than using two images and one border/container */
+/* But I dislike re-declaring and resetting the styles... */
 .border--sm-screen {
+    background-color: var(--color-bg-primary);
     border: 1px solid var(--color-text);
     padding: var(--flow-space);
 }
@@ -138,10 +146,12 @@ aside {
     }
 
     .border--sm-screen {
-        border: none;
+        border: initial;
+        background-color: initial;
     }
 
     .border--md-lg-screen {
+        background-color: var(--color-bg-primary);
         border: 1px solid var(--color-text);
         padding: var(--flow-space);
         flex: 0 1 var(--line-length-max);
