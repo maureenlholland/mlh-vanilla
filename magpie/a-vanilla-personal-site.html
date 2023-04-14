@@ -16,29 +16,35 @@
         </header>
         <main class="container flow">
             <p>I rebuild my personal site every few years. This time, I decided I wanted to go as minimal as possible. It's been the most enjoyable iteration.</p>
-            <h2>Another heading</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aperiam error voluptatem beatae, repellat dicta nemo officiis ipsa modi ipsum, distinctio aliquam exercitationem mollitia expedita cum ab ratione aut quia a. Optio quia illum nisi? Ipsam, quasi, nostrum eos culpa, atque explicabo doloribus sapiente provident laudantium reprehenderit repellat praesentium assumenda.</p>
-            <figure>
-                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate asperiores nisi ut officiis sunt voluptates placeat unde earum iste.</blockquote>
-                <figcaption>Anonymous</figcaption>
-            </figure>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aperiam error voluptatem beatae, repellat dicta nemo officiis ipsa modi ipsum, distinctio aliquam exercitationem mollitia expedita cum ab ratione aut quia a. Optio quia illum nisi? Ipsam, quasi, nostrum eos culpa, atque explicabo doloribus sapiente provident laudantium reprehenderit repellat praesentium assumenda.</p>
-            <h2>Another heading</h2>
-            <figure>
-                <img src="https://unsplash.it/640/425" alt="placeholder">
-                <figcaption>Unsplash</figcaption>
-            </figure>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aperiam error voluptatem beatae, repellat dicta nemo officiis ipsa modi ipsum, distinctio aliquam exercitationem mollitia expedita cum ab ratione aut quia a. Optio quia illum nisi? Ipsam, quasi, nostrum eos culpa, atque explicabo doloribus sapiente provident laudantium reprehenderit repellat praesentium assumenda.</p>
-<!-- todo: move to web component to strip out leading whitespace -->
-<pre>
-<code>
-body {
-    --light: snow;
-    --dark: navy;
-}
-</code>
-</pre>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aperiam error voluptatem beatae, repellat dicta nemo officiis ipsa modi ipsum, distinctio aliquam exercitationem mollitia expedita cum ab ratione aut quia a. Optio quia illum nisi? Ipsam, quasi, nostrum eos culpa, atque explicabo doloribus sapiente provident laudantium reprehenderit repellat praesentium assumenda.</p>
+            <h2>Why Vanilla?</h2>
+            <p>Mostly, I hate updating dependencies. This site can lie dormant for years. Inevitably, the first thing I need to do when I want to use it again is update a pack of dependencies (often with a breaking change or two). A chore. When all I want to do is play around with some new CSS feature I'm excited about. I can do that with a lot less hassle on <a href="https://codepen.io/">Codepen</a>.</p>
+            <p>But I still want a personal site. I'm intrigued by the idea of the <a href="https://indieweb.org/">IndieWeb</a>. I also want to contribute to the open knowledge base of developer experience that benefitted me so much when I started out. And I started out making sites with no dependencies. How hard would it be to go back to that?</p>
+            <h2>Challenges</h2>
+            <p>It's not that hard, really, but there are some key differences.</p>
+            <h3>No templates</h3>
+            <p>I skipped over this difficulty for now because I'm only launching with one blog post. Even then, it's clear for things like the <code>head</code> element how helpful templated layouts can be. I've used the VS Code <a href="https://code.visualstudio.com/docs/editor/emmet">Emmet extension</a> for years and it does a good job of scaffolding a basic page. Maybe I can leverage VS Snippets more to customize a shortcut for this site? Another thought is using <a href="https://www.webcomponents.org/">Web Components</a> to create a blog post component with slots for content.</p>
+            <h3>No optimisation</h3>
+            <p>This is the main reason I'd never do this for a client or professional website (unless it was very small and static). I could manually minify scripts and styles here but I won't. I will <s>probably</s> <s>eventually</s> maybe get around to writing an image optimization script I can run in the terminal, but I'll wait till I have images first.</p>
+            <h3>No hot module reloading</h3>
+            <p>I thought I'd miss this the most, but it became second nature to hit <kbd>CMD + R</kbd> every time I switched back to the browser (I should mention, I coded this site while travelling and only had access to my laptop, so there was much more screen switching than with my usual monitor setup). <abbr title="Your mileage may vary">YMMV</abbr>.</p>
+            <p>That said, it still felt like extra work, so I did a bit of searching for an alternative and VS Code came through again with the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server extension</a>.</p>
+            <h3>Harder to write tests</h3>
+            <p>I almost listed this as "No tests" but you can definitely run basic JavaScript tests without a framework. It is also definitely more work and the kind of work I would probably offload to some AI-based assistant because it's very boilerplate-y. I don't have any JavaScript at the moment, so am considering this a problem for future me.</p>
+            <h2>Benefits</h2>
+            <p>I'm loving this. Would 100% do again.</p>
+            <h3>No bloat</h3>
+            <p>I've done static personal sites with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://www.gatsbyjs.com/">Gatsby</a>. I can't make a fair comparison between them because the sites had different designs and different content. But to 11ty's credit, zero JavaScript was loaded on the production build. My Gatsby production site transferred 112.57 kB of JavaScript. Some of that is definitely me not knowing how to optimize Gatsby. But some of it is the nature of a JS-first framework.</p>
+            <p>Much as I love the 11ty results, I don't understand how it works and I can't control how it will work in future. I have a zero JavaScript site now, and I know exactly how it works. I place a high value on its simplicity.</p>
+            <h3>More time coding</h3>
+            <p>I spent a lot of time on previous iterations of this site pouring over framework configuration documentation and comparing build tools. I didn't much enjoy this time. It was overwhelming and frustrating. Something could do 90% of what I wanted with no trouble at all but the final 10% was a nightmare.</p>
+            <p>On this iteration, I've spent most of my time actual coding the site! Happy diversions include reading HTML and CSS documentation on <a href="https://developer.mozilla.org/en-US/docs/Web">MDN</a> and tutorials from some of my favourite front-end bloggers like <a href="https://www.ishadeed.com/">Ahmad Shadeed</a>, <a href="https://moderncss.dev/">Stephanie Eckles</a>, and <a href="https://set.studio/blog/">Set Studio</a>. Very different from frantically searching Stack Overflow to debug some obscure framework or build tool specific issue.</p>
+            <h3>Deeper understanding of browser capability</h3>
+            <p>Browsers develop at an incredible pace. The introduction of <a href="https://blog.silverorange.com/css-interop-is-awesome">Interop efforts (which I've written about on the silverorange blog)</a> has seen some truly game-changing features reach production-ready support levels.</p>
+            <p>I want this site to be part playground, part laboratory. Instead of relying on <a href="https://sass-lang.com/">Sass</a> for nesting or color functions, how far could I go with the native CSS features? Without a helper like <a href="https://preset-env.cssdb.org/">postcss-preset-env</a>, will I strengthen my ability to code with a progressive enhancement mindset? My theory is I will be more attuned to browser updates if I rely exclusively on what they can parse without a build step.</p>
+            <h2>What's Next?</h2>
+            <p><strong>More blog content</strong>. I want to properly test drive this vanilla approach with multiple posts containing new elements (i.e. quotes, images, code blocks). Most posts will be front-end based but I can foresee a few cycling and Scotch whisky digressions too.</p>
+            <p><strong>Minor enhancements</strong>. I'm not a designer. But I have lots of small tasks in mind for polishing the overall look here.</p>
+            <p><strong>A nap</strong>. I did not expect to write such a long first post. I'm tired now.</p>
         </main>
     </article>
 </body>
