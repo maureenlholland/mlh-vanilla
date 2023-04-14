@@ -1,18 +1,32 @@
-.art-deco-bg {
-    mask-image: radial-gradient(transparent, var(--color-bg-primary));
+header {
+    text-align: center;
 }
 
-.single-article  h1 {
-    font-size: var(--size-step-1);
+h1 {
     text-wrap: balance;
-    border: thick double var(--color-accent);
-    background-color: var(--color-bg-primary);
-    width: 70%;
-    margin-inline: auto;
-    padding: calc(var(--flow-space) / 2);
 }
 
-.single-article main p:first-of-type {
+main {
+    padding-block-start: 0;
+    margin-block-start: 0;
+}
+
+main p:first-of-type {
     font-size: var(--size-step-1);
     line-height: 1.2;
+}
+
+pre {
+    background-color: var(--color-text);
+    color: var(--color-bg-secondary); 
+    padding-inline: var(--flow-space);
+}
+
+figure {
+    margin-block: calc(var(--flow-space) * 2);
+}
+
+blockquote {
+    border-inline-start: 10px solid var(--color-text);
+    padding-inline-start: var(--flow-space);
 }

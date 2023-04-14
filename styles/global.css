@@ -1,3 +1,5 @@
+@layer reset, util;
+
 /* note: second src url is a fallback using legacy syntax */
 @font-face {
 	font-family: 'Josefin Sans';
@@ -7,105 +9,95 @@
 }
 
 /* Utils */
-:root {
-    --line-length-max: 50ch;
-    --flow-space: 1em;
-    --size-step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
-    --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
-    --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
-    --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
-    --font-stack: 'Josefin Sans', sans-serif;
-    --color-bg-primary: rgb(52, 51, 52);
-    --color-bg-secondary: rgb(7,16,21);
-    --color-text: rgb(251, 246, 238);
-    --color-accent: rgb(242, 214, 163); 
-
-    @media (prefers-color-scheme: light) {
-        --color-bg-primary: rgb(251, 246, 238);
-        --color-bg-secondary: rgb(242, 214, 163);
-        --color-text: rgb(52, 51, 52);
-        --color-accent: rgb(7,16,21); 
+@layer util {
+    :root {
+        --line-length-max: 50ch;
+        --flow-space: 1em;
+        --size-step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
+        --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
+        --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
+        --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
+        --font-stack: 'Josefin Sans', sans-serif;
+        --color-bg-primary: rgb(52, 51, 52);
+        --color-bg-secondary: rgb(7,16,21);
+        --color-text: rgb(251, 246, 238);
+        --color-accent: rgb(242, 214, 163); 
+    
+        @media (prefers-color-scheme: light) {
+            --color-bg-primary: rgb(251, 246, 238);
+            --color-bg-secondary: rgb(242, 214, 163);
+            --color-text: rgb(52, 51, 52);
+            --color-accent: rgb(7,16,21); 
+        }
     }
-}
-
-/* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
-.container {
-    width: min(100vw - 4rem, var(--container-max, var(--line-length-max)) );
-    margin-inline: auto;
-    padding-block-start: min(3rem, 10vh);
-    padding-block-end: min(3rem, 10vh);
-}
-
-.container--xl {
-    --container-max: max(1000px, var(--line-length-max));
-}
-
-/* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
-.flow > * + * {
-    margin-block-start: var(--flow-space);
-}
-
-:is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
-    --flow-space: 0.5em;
-}
-
-/* Elements */
-body {
-    background-color: var(--color-bg-primary);
-    color: var(--color-text);
-    font-family: var(--font-stack);
-    font-size: var(--size-step-0);
-    line-height: 1.5;
-}
-
-h1, h2, h3, h4 {
-    font-weight: 700;
-    line-height: 1;
-}
-
-h1,
-h2 {
-    text-align: center;
-}
-
-h1 {
-    font-size: var(--size-step-3);
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: var(--size-step-1);
-}
-
-a {
-    color: var(--color-accent);
-    text-underline-offset: 0.15rem;
-    text-decoration-color: var(--color-accent);
-    text-decoration-thickness: 0.05rem;
-}
-
-a:hover,
-a:focus,
-a:active {
-    font-weight: 300; 
-    text-decoration-thickness: 0.01rem;
-    /* I don't have a variable width axis,
-    but this avoids too much content shift with reduced font weight */ 
-    letter-spacing: 0.03rem;    
-}
-
-blockquote + figcaption {
-    font-weight: 100;
-    text-align: right;
-}
-
-.art-deco-bg {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    
+    /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
+    .container {
+        width: min(100vw - 4rem, var(--container-max, var(--line-length-max)) );
+        margin-inline: auto;
+        padding-block-start: min(3rem, 10vh);
+        padding-block-end: min(3rem, 10vh);
+    }
+    
+    .container--xl {
+        --container-max: max(1000px, var(--line-length-max));
+    }
+    
+    /* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
+    .flow > * + * {
+        margin-block-start: var(--flow-space);
+    }
+    
+    :is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
+        --flow-space: 0.5em;
+    }
+    
+    /* Elements */
+    body {
+        background-color: var(--color-bg-primary);
+        color: var(--color-text);
+        font-family: var(--font-stack);
+        font-size: var(--size-step-0);
+        line-height: 1.5;
+    }
+    
+    h1, h2, h3, h4 {
+        --flow-space: 2em;
+        font-weight: 700;
+        line-height: 1;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: var(--size-step-3);
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        font-size: var(--size-step-1);
+    }
+    
+    a {
+        color: var(--color-accent);
+        text-underline-offset: 0.15rem;
+        text-decoration-color: var(--color-accent);
+        text-decoration-thickness: 0.05rem;
+    }
+    
+    a:hover,
+    a:focus,
+    a:active {
+        font-weight: 300; 
+        text-decoration-thickness: 0.01rem;
+        /* I don't have a variable width axis,
+        but this avoids too much content shift with reduced font weight */ 
+        letter-spacing: 0.03rem;    
+    }
+    
+    :is(blockquote, img) + figcaption {
+        font-weight: 100;
+        text-align: right;
+    }
 }
 
 /* A pared-down version of Andy Bell's reset: https://andy-bell.co.uk/a-modern-css-reset/ */
