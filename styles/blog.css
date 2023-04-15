@@ -1,3 +1,26 @@
+header.link--all-posts {
+    position: sticky;
+    top: 0;
+    padding-block: 10px;
+    background-color: var(--color-accent);
+    @media (prefers-color-scheme: light) {
+        background-color: var(--color-bg-secondary);
+    }
+}
+
+header.link--all-posts a {
+    color: var(--color-bg-primary);
+    display: inline-block;
+
+    @media (prefers-color-scheme: light) {
+        color: var(--color-text);
+    }
+}
+
+header.link--all-posts svg {
+    vertical-align: bottom;
+}
+
 header {
     text-align: center;
 }
