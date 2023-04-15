@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/blog.css">
 </head>
-<body>
+<body class="blog">
     <article class="flow">
         <header class="container container--xl flow">
             <h1>A Vanilla Personal Site</h1>
@@ -24,20 +24,20 @@
             <h3>No templates</h3>
             <p>I skipped over this difficulty for now because I'm only launching with one blog post. Even then, it's clear for things like the <code>head</code> element how helpful templated layouts can be. I've used the VS Code <a href="https://code.visualstudio.com/docs/editor/emmet">Emmet extension</a> for years and it does a good job of scaffolding a basic page. Maybe I can leverage VS Snippets more to customize a shortcut for this site? Another thought is using <a href="https://www.webcomponents.org/">Web Components</a> to create a blog post component with slots for content.</p>
             <h3>No optimisation</h3>
-            <p>This is the main reason I'd never do this for a client or professional website (unless it was very small and static). I could manually minify scripts and styles here but I won't. I will <s>probably</s> <s>eventually</s> maybe get around to writing an image optimization script I can run in the terminal, but I'll wait till I have images first.</p>
+            <p>This is a big one if you care about scalability. I could manually minify scripts and styles here but I won't. Similarly, I'm not worried about tree-shaking or bundling in the context of a small, static personal site. I will <s>probably</s> <s>eventually</s> maybe get around to writing an image optimization script I can run in the terminal, but I'll wait till I have images first.</p>
             <h3>No hot module reloading</h3>
             <p>I thought I'd miss this the most, but it became second nature to hit <kbd>CMD + R</kbd> every time I switched back to the browser (I should mention, I coded this site while travelling and only had access to my laptop, so there was much more screen switching than with my usual monitor setup). <abbr title="Your mileage may vary">YMMV</abbr>.</p>
             <p>That said, it still felt like extra work, so I did a bit of searching for an alternative and VS Code came through again with the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server extension</a>.</p>
             <h3>Harder to write tests</h3>
-            <p>I almost listed this as "No tests" but you can definitely run basic JavaScript tests without a framework. It is also definitely more work and the kind of work I would probably offload to some AI-based assistant because it's very boilerplate-y. I don't have any JavaScript at the moment, so am considering this a problem for future me.</p>
+            <p>I almost listed this as "No tests" but you can definitely run basic JavaScript tests without a framework. It is also definitely more work and the kind of work I would like to offload to some AI-based assistant because it's very boilerplate-y. I don't have any JavaScript at the moment, so am considering this a problem for future me.</p>
             <h2>Benefits</h2>
             <p>I'm loving this. Would 100% do again.</p>
             <h3>No bloat</h3>
             <p>I've done static personal sites with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://www.gatsbyjs.com/">Gatsby</a>. I can't make a fair comparison between them because the sites had different designs and different content. But to 11ty's credit, zero JavaScript was loaded on the production build. My Gatsby production site transferred 112.57 kB of JavaScript. Some of that is definitely me not knowing how to optimize Gatsby. But some of it is the nature of a JS-first framework.</p>
-            <p>Much as I love the 11ty results, I don't understand how it works and I can't control how it will work in future. I have a zero JavaScript site now, and I know exactly how it works. I place a high value on its simplicity.</p>
+            <p>Much as I love the 11ty results, I don't understand how it works and I can't guarantee how it will work in future. I have a zero JavaScript site now and I know exactly how it works. I place high value on its simplicity.</p>
             <h3>More time coding</h3>
-            <p>I spent a lot of time on previous iterations of this site pouring over framework configuration documentation and comparing build tools. I didn't much enjoy this time. It was overwhelming and frustrating. Something could do 90% of what I wanted with no trouble at all but the final 10% was a nightmare.</p>
-            <p>On this iteration, I've spent most of my time actual coding the site! Happy diversions include reading HTML and CSS documentation on <a href="https://developer.mozilla.org/en-US/docs/Web">MDN</a> and tutorials from some of my favourite front-end bloggers like <a href="https://www.ishadeed.com/">Ahmad Shadeed</a>, <a href="https://moderncss.dev/">Stephanie Eckles</a>, and <a href="https://set.studio/blog/">Set Studio</a>. Very different from frantically searching Stack Overflow to debug some obscure framework or build tool specific issue.</p>
+            <p>I spent a lot of time on previous iterations of this site pouring over framework configuration documentation and comparing build tools. I didn't much enjoy this time. It was overwhelming and frustrating. Something could do 90% of what I wanted with no trouble at all but the other 10% was a nightmare.</p>
+            <p>On this iteration, I've spent most of my time actual coding the site! Happy diversions included reading HTML and CSS documentation on <a href="https://developer.mozilla.org/en-US/docs/Web">MDN</a> and tutorials from some of my favourite front-end bloggers like <a href="https://www.ishadeed.com/">Ahmad Shadeed</a>, <a href="https://moderncss.dev/">Stephanie Eckles</a>, and <a href="https://set.studio/blog/">Set Studio</a>. Very different from frantically searching Stack Overflow to debug some obscure framework or build tool specific issue.</p>
             <h3>Deeper understanding of browser capability</h3>
             <p>Browsers develop at an incredible pace. The introduction of <a href="https://blog.silverorange.com/css-interop-is-awesome">Interop efforts (which I've written about on the silverorange blog)</a> has seen some truly game-changing features reach production-ready support levels.</p>
             <p>I want this site to be part playground, part laboratory. Instead of relying on <a href="https://sass-lang.com/">Sass</a> for nesting or color functions, how far could I go with the native CSS features? Without a helper like <a href="https://preset-env.cssdb.org/">postcss-preset-env</a>, will I strengthen my ability to code with a progressive enhancement mindset? My theory is I will be more attuned to browser updates if I rely exclusively on what they can parse without a build step.</p>

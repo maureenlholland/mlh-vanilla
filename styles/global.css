@@ -30,6 +30,29 @@
             --color-accent: rgb(7,16,21); 
         }
     }
+
+    
+    
+    
+    /* Palette picked from magpie image and https://coolors.co/image-picker */
+    /* todo: iridescent gradient with teal/indigo */
+    /* teal: rgb(38,131,143) => (adjusted for better contrast) #02DADE */
+    /* indigo: rgb(0, 79, 120)  */
+    /* white: rgb(237, 238, 240) */
+    /* black: rgb(2, 27, 32) */
+    .blog {
+        --color-bg-primary: rgb(2, 27, 32);
+        --color-bg-secondary: rgb(0, 79, 120);
+        --color-text: rgb(237, 238, 240);
+        --color-accent: #02DADE; 
+
+        @media (prefers-color-scheme: light) {
+            --color-bg-primary: rgb(237, 238, 240);
+            --color-bg-secondary: #02DADE;
+            --color-text: rgb(2, 27, 32);
+            --color-accent: rgb(0, 79, 120); 
+        }
+    }
     
     /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
     .container {
