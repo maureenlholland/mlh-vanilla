@@ -1,14 +1,25 @@
-header.link--all-posts {
-    position: sticky;
-    top: 0;
-    padding-block: 10px;
+header {
+    text-align: center;
+}
+
+.top-bar {
     background-color: var(--color-accent);
+    text-align: left;
+    padding: 5px;
+}
+
+.top-bar svg {
+    transform: rotateY(180deg);
+
     @media (prefers-color-scheme: light) {
-        background-color: var(--color-bg-secondary);
+        box-sizing: content-box;
+        padding: 5px;
+        background-color: var(--color-bg-primary);
+        border-radius: 50%;
     }
 }
 
-header.link--all-posts a {
+.top-bar a {
     color: var(--color-bg-primary);
     display: inline-block;
 
@@ -17,39 +28,6 @@ header.link--all-posts a {
     }
 }
 
-header.link--all-posts svg {
+.top-bar svg {
     vertical-align: bottom;
-}
-
-header {
-    text-align: center;
-}
-
-h1 {
-    text-wrap: balance;
-}
-
-main {
-    border-block-start: 10px solid var(--color-accent);
-    margin-block-start: 0;
-}
-
-main p:first-of-type {
-    font-size: var(--size-step-1);
-    line-height: 1.2;
-}
-
-pre {
-    background-color: var(--color-text);
-    color: var(--color-bg-secondary); 
-    padding-inline: var(--flow-space);
-}
-
-figure {
-    margin-block: calc(var(--flow-space) * 2);
-}
-
-blockquote {
-    border-inline-start: 10px solid var(--color-text);
-    padding-inline-start: var(--flow-space);
 }
