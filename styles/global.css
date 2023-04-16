@@ -3,8 +3,8 @@
 /* note: second src url is a fallback using legacy syntax */
 @font-face {
 	font-family: 'Josefin Sans';
-	src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype') tech('variations'),
-	     url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype-variations');
+	src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype') tech('variations');
+	src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype-variations');
 	font-weight: 100 700;
 }
 
@@ -17,7 +17,7 @@
         --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
         --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
         --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
-        --font-stack: 'Josefin Sans', sans-serif;
+        --font-stack: 'Josefin Sans', system-ui, sans-serif;
         --color-bg-primary: rgb(52, 51, 52);
         --color-bg-secondary: rgb(7,16,21);
         --color-text: rgb(251, 246, 238);
