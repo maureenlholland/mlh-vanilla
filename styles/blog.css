@@ -2,32 +2,31 @@ header {
     text-align: center;
 }
 
+/* to-do: max width on content inside bar? or center once above 1400px screen width? */
 .top-bar {
     background-color: var(--color-accent);
     text-align: left;
-    padding: 5px;
-}
-
-.top-bar svg {
-    transform: rotateY(180deg);
+    padding: 5px 10px;
 
     @media (prefers-color-scheme: light) {
-        box-sizing: content-box;
-        padding: 5px;
-        background-color: var(--color-bg-primary);
-        border-radius: 50%;
+        background-color: initial;
     }
 }
 
-.top-bar a {
+/* todo: make icon size match font size */
+.top-bar__icon {
+    transform: rotateY(180deg); /* todo: move this to svg? */
+    vertical-align: bottom;
+    margin-inline-end: 5px;
+}
+
+.top-bar__link {
     color: var(--color-bg-primary);
+    text-decoration-color: var(--color-bg-primary);
     display: inline-block;
 
     @media (prefers-color-scheme: light) {
         color: var(--color-text);
+        text-decoration-color: var(--color-text);
     }
-}
-
-.top-bar svg {
-    vertical-align: bottom;
 }
