@@ -102,19 +102,26 @@
     
     a {
         color: var(--color-accent);
-        text-underline-offset: 0.15rem;
+        font-weight: 500;
+        text-underline-offset: 0.1rem;
+        text-underline-position: from-font;
         text-decoration-color: var(--color-accent);
-        text-decoration-thickness: 0.05rem;
+        text-decoration-thickness: 0.1rem;
+        transition: color 0.1s, text-decoration-thickness 0.1s, text-underline-offset 0.1s;
     }
     
     a:hover,
     a:focus,
-    a:active {
-        font-weight: 300; 
-        text-decoration-thickness: 0.01rem;
-        /* I don't have a variable width axis,
-        but this avoids too much content shift with reduced font weight */ 
-        letter-spacing: 0.03rem;    
+    a:active { 
+        color: var(--color-text);
+        text-underline-offset: 0.2rem;
+        text-decoration-thickness: 0.2rem;
+        /* I really enjoyed text-decoration-style: wavy, but it's not animatable */
+    }
+
+    a:focus-visible {
+        outline: 1px solid var(--color-accent);
+        outline-offset: 0.2rem;
     }
     
     :is(blockquote, img) + figcaption {

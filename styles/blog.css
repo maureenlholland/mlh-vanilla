@@ -30,3 +30,13 @@ header {
         text-decoration-color: var(--color-text);
     }
 }
+
+.top-bar__link:focus-visible {
+    outline: 3px solid var(--color-bg-primary);
+    outline-offset: 1px;
+    outline-style: double;
+
+    @media (prefers-color-scheme: light) {
+        outline-color: var(--color-text);
+    }
+}
