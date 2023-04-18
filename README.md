@@ -42,4 +42,10 @@ I see magpies everywhere in England. I was lucky to find this lovely icon from T
 
 Then I dropped it into the [Favicon Generator](https://favicon.io/favicon-converter/) because I can never remember exactly what size or format favicons need to be.
 
+## Hosting
+
+I bought my custom domain names from [Hover](https://www.hover.com/).
+
+Keeping it simple, I decided to use [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) for hosting.
+
 
