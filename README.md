@@ -36,3 +36,10 @@ I finally used some sites I've had bookmarked forever:
 - https://typescale.com/ (I chose a Golden Ratio scale for desktop)
 - https://utopia.fyi/ (Reduce to Perfect Fourth scale for mobile, set min/max through clamp)
 
+## Favicon
+
+I see magpies everywhere in England. I was lucky to find this lovely icon from Tom through the Noun project: https://thenounproject.com/icon/magpie-816781/
+
+Then I dropped it into the [Favicon Generator](https://favicon.io/favicon-converter/) because I can never remember exactly what size or format favicons need to be.
+
+
