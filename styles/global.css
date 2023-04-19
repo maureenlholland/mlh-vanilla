@@ -63,7 +63,7 @@
     }
     
     .container--xl {
-        --container-max: max(1000px, var(--line-length-max));
+        --container-max: 62.5rem;
     }
     
     /* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */

@@ -41,7 +41,7 @@ aside {
     padding: var(--flow-space);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 32rem) {
     .profile-pic {
         float: none;
         margin-inline-end: initial;
