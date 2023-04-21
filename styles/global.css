@@ -1,4 +1,4 @@
-@layer reset, util;
+@layer reset, util, base;
 
 /* note: second src url is a fallback using legacy syntax */
 @font-face {
@@ -8,8 +8,8 @@
 	font-weight: 100 700;
 }
 
-/* Utils */
-@layer util {
+/* Elements */
+@layer base {
     :root {
         --line-length-max: 50ch;
         --flow-space: 1em;
@@ -18,64 +18,8 @@
         --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
         --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
         --font-stack: 'Josefin Sans', system-ui, sans-serif;
-        --color-bg-primary: rgb(52, 51, 52);
-        --color-bg-secondary: rgb(7,16,21);
-        --color-text: rgb(251, 246, 238);
-        --color-accent: rgb(242, 214, 163); 
-    
-        @media (prefers-color-scheme: light) {
-            --color-bg-primary: rgb(251, 246, 238);
-            --color-bg-secondary: rgb(242, 214, 163);
-            --color-text: rgb(52, 51, 52);
-            --color-accent: rgb(7,16,21); 
-        }
     }
 
-    
-    
-    
-    /* Palette picked from magpie image and https://coolors.co/image-picker */
-    /* todo: iridescent gradient with teal/indigo */
-    /* teal: rgb(38,131,143) => (adjusted for better contrast) #02DADE */
-    /* indigo: rgb(0, 79, 120)  */
-    /* white: rgb(237, 238, 240) */
-    /* black: rgb(2, 27, 32) */
-    .blog {
-        --color-bg-primary: rgb(2, 27, 32);
-        --color-bg-secondary: rgb(0, 79, 120);
-        --color-text: rgb(237, 238, 240);
-        --color-accent: #02DADE; 
-
-        @media (prefers-color-scheme: light) {
-            --color-bg-primary: rgb(237, 238, 240);
-            --color-bg-secondary: #02DADE;
-            --color-text: rgb(2, 27, 32);
-            --color-accent: rgb(0, 79, 120); 
-        }
-    }
-    
-    /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
-    .container {
-        width: min(100vw - 4rem, var(--container-max, var(--line-length-max)) );
-        margin-inline: auto;
-        padding-block-start: min(3rem, 10vh);
-        padding-block-end: min(3rem, 10vh);
-    }
-    
-    .container--xl {
-        --container-max: 62.5rem;
-    }
-    
-    /* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
-    .flow > * + * {
-        margin-block-start: var(--flow-space);
-    }
-    
-    :is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
-        --flow-space: 0.5em;
-    }
-    
-    /* Elements */
     body {
         background-color: var(--color-bg-primary);
         color: var(--color-text);
@@ -127,6 +71,30 @@
     :is(blockquote, img) + figcaption {
         font-weight: 100;
         text-align: right;
+    }
+}   
+    
+/* Utils */
+@layer util {
+    /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
+    .container {
+        width: min(100vw - 4rem, var(--container-max, var(--line-length-max)) );
+        margin-inline: auto;
+        padding-block-start: min(3rem, 10vh);
+        padding-block-end: min(3rem, 10vh);
+    }
+    
+    .container--xl {
+        --container-max: 62.5rem;
+    }
+    
+    /* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
+    .flow > * + * {
+        margin-block-start: var(--flow-space);
+    }
+    
+    :is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
+        --flow-space: 0.5em;
     }
 }
 

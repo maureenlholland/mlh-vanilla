@@ -1,3 +1,17 @@
+:root {
+    --color-bg-primary: rgb(52, 51, 52);
+    --color-bg-secondary: rgb(7,16,21);
+    --color-text: rgb(251, 246, 238);
+    --color-accent: rgb(242, 214, 163); 
+
+    @media (prefers-color-scheme: light) {
+        --color-bg-primary: rgb(251, 246, 238);
+        --color-bg-secondary: rgb(242, 214, 163);
+        --color-text: rgb(52, 51, 52);
+        --color-accent: rgb(7,16,21); 
+    }
+}
+
 .art-deco-bg {
     position: fixed;
     z-index: -1;
