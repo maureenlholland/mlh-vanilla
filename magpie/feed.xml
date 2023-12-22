@@ -1,0 +1,20 @@
+<rss version="2.0">
+    <channel>
+        <title>Magpie</title>
+        <link>https://maureenholland.ca/magpie/</link>
+        <description>Blog of writer and web developer Maureen Holland. Untidy nest of shiny things.</description>
+        <language>en-ca</language>
+        <item>
+            <title>A Vanilla Personal Site</title>
+            <link>https://maureenholland.ca/magpie/a-vanilla-personal-site</link>
+            <guid isPermaLink="false">https://maureenholland.ca/magpie/a-vanilla-personal-site</guid>
+            <pubDate>Tue, 18 Apr 2023 12:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>IndieWeb-ificiation</title>
+            <link>https://maureenholland.ca/magpie/indieweb-ification</link>
+            <guid isPermaLink="false">https://maureenholland.ca/magpie/indieweb-ification</guid>
+            <pubDate>Sat, 23 Dec 2023 12:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
