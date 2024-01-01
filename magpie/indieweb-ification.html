@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" /><meta
+    content="IE=edge"
+    http-equiv="X-UA-Compatible"
+  /><meta content="width=device-width,initial-scale=1" name="viewport" />
+  <meta name="author" content="Maureen Holland" />
+    <meta
+      name="description"
+      content="This is a catch-all post for a bunch of miscellaneous updates I've
+      been meaning to do since April: rel=me, microformatting, and RSS."
+    />
+    <meta property="og:title" content="Magpie | IndieWeb-ification" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="This is a catch-all post for a bunch of miscellaneous updates I've
+      been meaning to do since April: rel=me, microformatting, and RSS."
+    />
+    <meta property="og:image" content="../images/meta/magpie.jpg" />
+    <meta
+      property="og:url"
+      content="https://maureenholland.ca/magpie/indieweb-ification"
+    />
+  <link
+    href="../apple-touch-icon.png"
+    rel="apple-touch-icon"
+    sizes="180x180"
+  /><link
+    href="../favicon-32x32.png"
+    rel="icon"
+    sizes="32x32"
+    type="image/png"
+  /><link
+    href="../favicon-16x16.png"
+    rel="icon"
+    sizes="16x16"
+    type="image/png"
+  /><link href="../site.webmanifest" rel="manifest" /><title>
+    Magpie | IndieWeb-ification</title
+  ><link href="../styles/global.css" rel="stylesheet" /><link
+    href="../styles/blog.css"
+    rel="stylesheet"
+  /><link href="../styles/post.css" rel="stylesheet" />
+  <body class="blog">
+    <header class="top-bar">
+      <svg
+          class="top-bar__icon"
+          height="34"
+          role="presentation"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      <nav>
+      <a href="./"
+        >
+        Home
+      </a>
+        <a href="./feeds">Feeds</a>
+    </nav>
+    </header>
+    <article class="flow | h-entry">
+      <header class="flow container container--xl">
+        <h1 class="p-name">IndieWeb-ification</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2024-01-03"
+            >January 3, 2024</time
+          >
+        </p>
+      </header>
+      <main class="flow container e-content |">
+        <p>
+          This is a catch-all post for a bunch of miscellaneous updates I've
+          been meaning to do since April.
+          <small
+            >(Sidenote: if you want to test the resilience of your blog post
+            styling, try titling one "IndieWeb-ification")</small
+          >
+        </p>
+        <h2>What's the IndieWeb?</h2>
+        <blockquote>
+          The IndieWeb is a community of independent and personal websites
+          connected by simple standards, based on the principles of: owning your
+          domain and using it as your primary identity, publishing on your own
+          site (optionally syndicating elsewhere), and owning your data.
+          <footer>
+            <cite><a href="https://indieweb.org/">IndieWeb: Home</a></cite>
+          </footer>
+        </blockquote>
+        <p>
+          I bought my domain on <a href="https://www.hover.com/">Hover</a> in
+          2016. It costs $15.99 USD per year.</p>
+          <p>I use
+          <a href="https://pages.github.com/">GitHub pages</a> for hosting
+          because it's free and convenient (but I've had good experiences with
+          <a href="https://www.greengeeks.com/">GreenGeeks</a> in the past and
+          would definitely go back if I decide I want to pay for hosting again).
+        </p>
+        <p>
+          Technically, that's it! I've been IndieWeb for years without knowing!</p>
+          <p>
+          It's important to note that you can build the site however the heck
+          you want. There's no need to avoid dependencies like the plague (a
+          personal preference of mine). But now I know I've got the essentials
+          covered, I also want to add a few of the optional features mentioned
+          in their
+          <a href="https://indieweb.org/Getting_Started">Getting Started</a>
+          page.
+        </p>
+        <h2><code>rel="me"</code></h2>
+        <p>
+          It's not too hard to consider this site as my primary identity because
+          I abandoned Facebook and Twitter years ago. I do exist on Mastodon
+          though, and wanted to figure out how to get the green background and
+          checkmark on my Mastodon profile for my personal homepage link.
+        </p>
+        <p>
+          Turns out, I had only completed half of the requirements for
+          verification. There was no indication from my personal site that my
+          social Mastodon link was representing <em>me</em> instead of some
+          other Mastodon user.
+        </p>
+        <p>
+          The fix was delightfully simple: add <code>rel="me"</code> to my
+          homepage social link.
+        </p>
+        <figure>
+          <img
+            src="../images/rel-me-markup.png"
+            alt="Firefox DevTools open to inspect anchor element with 'Mastodon' text. Focus around 'rel=me' attribute in markup."
+            loading="lazy"
+          />
+          <figcaption>Personal homepage Mastodon link</figcaption>
+        </figure>
+        <p>
+          I then needed to remove and re-add the field in Mastodon to trigger a
+          verification check with the new markup.
+        </p>
+        <figure>
+          <img
+            src="../images/rel-me-website.png"
+            alt="Fields in Mastodon profile. Joined: Mar 07, 2023. GitHub: github.com/maureenlholland (not verified). Pronouns: she/her. Personal Site: maureenholland.ca (verified!). Employer: silverorange.com"
+            loading="lazy"
+          />
+          <figcaption>
+            Mastodon profile with verified personal homepage link
+          </figcaption>
+        </figure>
+        <p>I live for small victories.</p>
+        <p>
+          So I decided to verify my GitHub link as well. This involved heading
+          to my GitHub page and editing the profile to add my Mastodon social
+          link (no need for <code>rel="me"</code> in the GitHub profile, although it's a good idea to include it on your personal site GitHub URL). One
+          remove/re-add field link dance on Mastodon later and I had doubled my
+          number of verified links.
+        </p>
+        <figure>
+          <img
+            src="../images/gh-social-link.png"
+            alt="Fields in Mastodon profile, now with both Personal Site and GitHub links verified."
+            loading="lazy"
+          />
+          <figcaption>Mastodon profile with verified GitHub link</figcaption>
+        </figure>
+        <h2>Microformatting</h2>
+        <blockquote>
+          This will allow other people's software to easily read and understand
+          your content. This is useful for a variety of things like recognizing
+          comments, likes, reposts, and displaying reply-contexts for your
+          posts.
+          <footer>
+            <cite><a href="https://indieweb.org/Getting_Started#Add_microformats_to_your_content">IndieWeb: Getting Started</a></cite>
+          </footer>
+        </blockquote>
+        <p>
+          Now, am I using any of this interactive potential at the moment? Nope.
+          The
+          <a
+            href="https://github.com/maureenlholland/mlh-vanilla/pull/1/commits/b60332a270c15d725db158c8ad3b171de93bcb37"
+            >addition of microformatting</a
+          >
+          was more of an academic exercise than a practical one. I wanted to see
+          if my understanding matched the
+          <a
+            href="https://indiewebify.me/validate-h-entry/?url=https%3A%2F%2Fmaureenholland.ca%2Fmagpie%2Fa-vanilla-personal-site"
+            >validator results</a
+          >.
+        </p>
+        <p>It was a semi-success. The following information was validated:</p>
+        <ul>
+          <li>Name</li>
+          <li>Date Published</li>
+          <li>Content</li>
+        </ul>
+        <p>
+          But then there were a bunch of gaps for information I hadn't included
+          in the original design for post pages:
+        </p>
+        <ul>
+          <li>Author</li>
+          <li>Canonicial URL</li>
+          <li>Syndicated Copies</li>
+          <li>Categories</li>
+        </ul>
+        <p>
+          I decided to consider the microformatting experiment a work in progress and move on to creating a web feed.
+        </p>
+        <h2>RSS</h2>
+        <blockquote>
+          Using an RSS reader is a little like using Twitter or Facebook, but where you’re totally in control. It’s the same in that you have a stream of the latest content. But unlike those platforms, RSS is decentralised. Nobody gets all of that data in one place, so nobody can use it to nudge your behaviour.
+          <footer>
+            <cite><a href="https://interconnected.org/home/2020/07/29/improving_rss">Matt Webb</a></cite>
+          </footer>
+        </blockquote>
+        <p>
+          RSS stands for Really Simple Syndication or Rich Site Summary. It's
+          the specification that brought us podcasts.
+        </p>
+        <p>
+          I became a big fan of RSS after reading
+          <a href="https://timkadlec.com/remembers/2023-02-23-investing-in-rss/"
+            >Tim Kadlec's "Investing in RSS" post</a
+          >. Before this, I haphazardly subscribed to newsletters and infrequently
+          remembered to check my favourite bloggers for new content. After this,
+          I started cultivating a collection of feeds that provide an invaluable daily source of inspiration and learning.
+        </p>
+        <p>
+          I knew I wanted to include a feed on my blog, but I didn't know
+          how to make one without a plugin. That seems a bit of a
+          counter-argument to the "Really Simple" promise of its acronym. My
+          searches for "How to make an RSS Feed" returned more results about
+          pulling from an existing site instead of creating a feed on the site
+          itself.
+        </p>
+        <p>
+          I decided to write the XML file myself and went directly to the
+          <a href="https://www.rssboard.org/rss-specification"
+            >RSS Specification</a
+          >
+          for guidance.
+        </p>
+        <h3>Blog Information</h3>
+        <p>
+          The <code>channel</code> element holds information about the blog
+          itself and requires three child elements:</p>
+          <dl>
+            <dt><code>title</code></dt>
+            <dd>a link to the post</dd>
+            <dt><code>description</code></dt>
+            <dd>a Global Unique IDentifier (allows feed readers to determine if they've seen an item before)</dd>
+            <dt><code>link</code></dt>
+            <dd>publish date</dd>
+          </dl>
+          <p>I've also added <code>language</code> for the benefit of aggregators that want to group content by language.
+        </p>
+        <h3>Post Information</h3>
+        <p>
+          <code>item</code> elements are <em>optional</em> children of the
+          <code>channel</code>, but for a blog feed they are essentially required because
+          they contain information about individual posts, which is all anyone subscribing to an RSS blog feed cares about. They only require one
+          of <code>title</code> or <code>description</code> elements.</p>
+          <p>I decided
+          to include the <code>title</code> and a few optional elements:</p>
+          <dl>
+            <dt><code>link</code></dt>
+            <dd>a link to the post</dd>
+            <dt><code>guid</code></dt>
+            <dd>a Global Unique IDentifier (allows feed readers to determine if they've seen an item before)</dd>
+            <dt><code>pubDate</code></dt>
+            <dd>publish date</dd>
+            <dt><code>description</code></dt>
+            <dd>can be an excerpt or the whole damn post</dd>
+          </dl>
+        </p>
+        <h2>What's Next?</h2>
+        <p>Custom scripts!</p>
+        <p>
+          As long as I've got a
+          <a href="https://www.last.fm/music/Santigold/99+Cents"
+            >good soundtrack</a
+          >, I'm happy to hand roll a blog feed. But no amount of happiness ever
+          bought a second of time. I know I need to speed up certain processes to spend
+          more time on the content.
+        </p>
+        <p>Top 3 on the automate-it wishlist:</p>
+        <ol>
+          <li>Add new post to RSS feed</li>
+          <li>Add new post to blog homepage feed</li>
+          <li>Generate optimized, responsive images</li>
+        </ol>
+        <p>
+          I've got to do it all at least once long-ways to figure out how I
+          would even begin to think of scripting it. There's a big difference
+          for me between being slow and being stuck. I'm prone to abandoning
+          things if I get stuck. I will start noticing patterns if I go slow.
+          Hopefully these patterns translate fairly easily into instructions for
+          an automated process.
+        </p>
+        <p></p>
+      </main>
+    </article>
+    <footer>
+      <p>Mastodon Link</p>
+      <p>Tiny "About Me" bit</p>
+    </footer>
+  </body>
+</html>

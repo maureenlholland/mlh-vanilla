@@ -5,58 +5,74 @@
 /* white: rgb(237, 238, 240) */
 /* black: rgb(2, 27, 32) */
 .blog {
-    --color-bg-primary: rgb(2, 27, 32);
-    --color-bg-secondary: rgb(0, 79, 120);
-    --color-text: rgb(237, 238, 240);
-    --color-accent: #02DADE; 
+  --color-bg-primary: rgb(2, 27, 32);
+  --color-bg-secondary: rgb(0, 79, 120);
+  --color-text: rgb(237, 238, 240);
+  --color-accent: #02dade;
 
-    @media (prefers-color-scheme: light) {
-        --color-bg-primary: rgb(237, 238, 240);
-        --color-bg-secondary: #02DADE;
-        --color-text: rgb(2, 27, 32);
-        --color-accent: rgb(0, 79, 120); 
-    }
+  @media (prefers-color-scheme: light) {
+    --color-bg-primary: rgb(237, 238, 240);
+    --color-bg-secondary: #02dade;
+    --color-text: rgb(2, 27, 32);
+    --color-accent: rgb(0, 79, 120);
+  }
 }
 
 header {
-    text-align: center;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
 }
 
 /* to-do: max width on content inside bar? or center once above 1400px screen width? */
 .top-bar {
-    background-color: var(--color-accent);
-    text-align: left;
-    padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-accent);
+  text-align: left;
+  padding: 5px 10px;
 
-    @media (prefers-color-scheme: light) {
-        background-color: initial;
-    }
+  @media (prefers-color-scheme: light) {
+    background-color: initial;
+  }
 }
 
 /* todo: make icon size match font size */
 .top-bar__icon {
-    transform: rotateY(180deg); /* todo: move this to svg? */
-    vertical-align: bottom;
-    margin-inline-end: 5px;
+  transform: rotateY(180deg); /* todo: move this to svg? */
+  width: 3rem;
+  height: auto;
 }
 
-.top-bar__link {
-    color: var(--color-bg-primary);
-    text-decoration-color: var(--color-bg-primary);
-    display: inline-block;
+.top-bar a {
+  color: var(--color-bg-primary);
+  text-decoration-color: var(--color-bg-primary);
+  display: inline-block;
 
-    @media (prefers-color-scheme: light) {
-        color: var(--color-text);
-        text-decoration-color: var(--color-text);
-    }
+  @media (prefers-color-scheme: light) {
+    color: var(--color-text);
+    text-decoration-color: var(--color-text);
+  }
 }
 
 .top-bar__link:focus-visible {
-    outline: 3px solid var(--color-bg-primary);
-    outline-offset: 1px;
-    outline-style: double;
+  outline: 3px solid var(--color-bg-primary);
+  outline-offset: 1px;
+  outline-style: double;
 
-    @media (prefers-color-scheme: light) {
-        outline-color: var(--color-text);
-    }
+  @media (prefers-color-scheme: light) {
+    outline-color: var(--color-text);
+  }
+}
+
+header p + p {
+  --flow-space: 0.5em;
+}
+
+article + article {
+  margin-block-start: calc(var(--flow-space) * 2);
 }

@@ -1,69 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-    <link rel="manifest" href="../site.webmanifest">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Maureen Holland" />
+    <meta
+      name="description"
+      content="I rebuild my personal site every few years. This time, I decided I
+    wanted to go as minimal as possible. It's been the most enjoyable
+    iteration."
+    />
+    <meta property="og:title" content="Magpie | A vanilla personal site" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="I rebuild my personal site every few years. This time, I decided I
+wanted to go as minimal as possible. It's been the most enjoyable
+iteration."
+    />
+    <meta property="og:image" content="../images/meta/magpie.jpg" />
+    <meta
+      property="og:url"
+      content="https://maureenholland.ca/magpie/a-vanilla-personal-site"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
     <title>Magpie | A vanilla personal site</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/blog.css">
-    <link rel="stylesheet" href="../styles/post.css">
-</head>
-<body class="blog">
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+  </head>
+  <body class="blog">
     <header class="top-bar">
-        <a href="./" class="top-bar__link">
-            <svg class="top-bar__icon" role="presentation" width="34" height="34" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-                <path d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"/>
-            </svg>All Posts
-        </a>
+      <svg
+        class="top-bar__icon"
+        height="34px"
+        role="presentation"
+        version="1.1"
+        viewBox="0 0 1200 1200"
+        width="34px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+        />
+      </svg>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./feeds">Feeds</a>
+      </nav>
     </header>
     <article class="h-entry | flow">
-        <header class="container container--xl flow">
-            <h1 class="p-name">A Vanilla Personal Site</h1>
-            <p>Published <time class="dt-published" datetime="2023-04-18">April 18, 2023</time></p>
-        </header>
-        <main class="e-content | container flow">
-            <p>I rebuild my personal site every few years. This time, I decided I wanted to go as minimal as possible. It's been the most enjoyable iteration.</p>
-            <h2>Why Vanilla?</h2>
-            <p>Mostly, I hate updating dependencies. This site can lie dormant for years. Inevitably, the first thing I need to do when I want to use it again is update a pack of dependencies (often with a breaking change or two). A chore. When all I want to do is play around with some new CSS feature I'm excited about. I can do that with a lot less hassle on <a href="https://codepen.io/">Codepen</a>.</p>
-            <p>But I still want a personal site. I'm intrigued by the idea of the <a href="https://indieweb.org/">IndieWeb</a>. I also want to contribute to the open knowledge base of developer experience that benefitted me so much when I started out. And I started out making sites with no dependencies. How hard would it be to go back to that?</p>
-            <h2>Challenges</h2>
-            <p>It's not that hard, really, but there are some key differences.</p>
-            <h3>No templates</h3>
-            <p>I skipped over this difficulty for now because I'm only launching with one blog post. Even then, it's clear for things like the <code>head</code> element how helpful templated layouts can be. I've used the VS Code <a href="https://code.visualstudio.com/docs/editor/emmet">Emmet extension</a> for years and it does a good job of scaffolding a basic page. Maybe I can leverage VS Snippets more to customize a shortcut for this site? Another thought is using <a href="https://www.webcomponents.org/">Web Components</a> to create a blog post component with slots for content.</p>
-            <h3>No optimisation</h3>
-            <p>This is a big one if you care about scalability. I could manually minify scripts and styles here but I won't. Similarly, I'm not worried about tree-shaking or bundling in the context of a small, static personal site. I will <s>probably</s> <s>eventually</s> maybe get around to writing an image optimization script I can run in the terminal.</p>
-            <h3>No hot module reloading</h3>
-            <p>I thought I'd miss this the most, but it became second nature to hit <kbd>CMD + R</kbd> every time I switched back to the browser (I should mention, I coded this site while travelling and only had access to my laptop, so there was much more screen switching than with my usual monitor setup). <abbr title="Your mileage may vary">YMMV</abbr>.</p>
-            <p>That said, it still felt like extra work, so I did a bit of searching for an alternative and VS Code came through again with the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server extension</a>.</p>
-            <h3>Harder to write tests</h3>
-            <p>I almost listed this as "No tests" but you can definitely run basic JavaScript tests without a framework. It is also definitely more work and the kind of work I would like to offload to some AI-based assistant because it's very boilerplate-y. I don't have any JavaScript at the moment, so am considering this a problem for future me.</p>
-            <h2>Benefits</h2>
-            <p>I'm loving this. Would 100% do again.</p>
-            <h3>No bloat</h3>
-            <p>I've done static personal sites with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://www.gatsbyjs.com/">Gatsby</a>. I can't make a fair comparison between them because the sites had different designs and different content. But to 11ty's credit, zero JavaScript was loaded on the production build. My Gatsby production site transferred 112.57 kB of JavaScript. Some of that is definitely me not knowing how to optimize Gatsby. But some of it is the nature of a JS-first framework.</p>
-            <p>Much as I love 11ty's user-facing results, I'm considering dev-facing bloat too. As of this post's publish date, the <a href="https://github.com/11ty/eleventy/network/dependencies">11ty dependency graph</a> shows 55 dependencies (and those dependencies have dependencies, and so on). There's an <a href="https://github.com/11ty/eleventy/issues/1375#issuecomment-1197354844">ongoing effort to keep dependencies as low as possible</a> but all dependencies require maintenance. I'm happy to do that work when someone's paying me to do it, but for a static site I tinker with in my free time, zero dependencies is hard to beat.</p>
-            <h3>More time coding</h3>
-            <p>I spent a lot of time on previous iterations of this site pouring over framework configuration documentation and comparing build tools. I didn't much enjoy this time. It was overwhelming and frustrating. Something could do 90% of what I wanted with no trouble at all but the other 10% was a nightmare.</p>
-            <p>On this iteration, I've spent most of my time actual coding the site! Happy diversions included reading HTML and CSS documentation on <a href="https://developer.mozilla.org/en-US/docs/Web">MDN</a> and tutorials from some of my favourite front-end bloggers like <a href="https://www.ishadeed.com/">Ahmad Shadeed</a>, <a href="https://moderncss.dev/">Stephanie Eckles</a>, and <a href="https://set.studio/blog/">Set Studio</a>. Very different from frantically searching Stack Overflow to debug some obscure framework or build tool specific issue.</p>
-            <h3>Deeper understanding of browser capability</h3>
-            <p>Browsers develop at an incredible pace. The introduction of Interop efforts (which I've written about on the <a href="https://blog.silverorange.com/css-interop-is-awesome">silverorange blog</a>) has seen some truly game-changing features reach production-ready support levels.</p>
-            <p>I want this site to be part playground, part laboratory.  My theory is I will be more attuned to browser updates if I rely exclusively on what they can parse without a build step. I experimented with variable fonts, CSS nesting, <code>@layer</code>, <code>:is()</code>, <code>:where()</code>, <code>text-decoration-thickness</code>, and <code>text-underline-offset</code> in the base styles here. I very much wanted to use nesting more, but the foundational styles needed greater browser support. Progressive enhancements like light mode are nested (<a href="https://caniuse.com/?search=nesting">see which browsers support nesting on caniuse.com</a>).</p>
-            <h2>What's Next?</h2>
-            <p><strong>More blog content</strong>. I want to find the rough edges of this approach and that's much easier to do with lots of varied content. I'm hoping the patterns that emerge will naturally develop into web components.</p>
-            <p><strong>Minor enhancements</strong>. I'm not a designer. Luckily, Coolors has a very helpful <a href="https://coolors.co/image-picker">Image Picker palette generator</a>. I also used their <a href="https://coolors.co/contrast-checker/112a46-acc8e5">contrast checker</a> enhance the contrast ratio of the teal colour for better readability on the black background.</p>
-            <picture>
-                <source srcset="../images/magpie-palette-600.webp,  ../images/magpie-palette-1200.webp 2x" type="image/webp" />
-                <source srcset="../images/magpie-palette-600.jpg,  ../images/magpie-palette-1200.jpg 2x" type="image/jpg" />
-                <img loading="lazy" src="../images/magpie-palette-1200.jpg" alt="Four color palette selected from picture of a magpie in flight. The bird has a black and white body, with iridescent shades of blue and green along its outstretched wings." />
-            </picture>              
-            <p>I still want to play around with the colors, maybe using new color spaces or <code>color-mix()</code>. I'd love to find some way to recreate the shimmering glow of those feathers.</p>
-            <p><strong>A nap</strong>. I did not expect to write such a long first post. I'm tired now.</p>
-        </main>
+      <header class="container container--xl flow">
+        <h1 class="p-name">A Vanilla Personal Site</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2023-04-18">April 18, 2023</time>
+        </p>
+      </header>
+      <main class="e-content | container flow">
+        <p>
+          I rebuild my personal site every few years. This time, I decided I
+          wanted to go as minimal as possible. It's been the most enjoyable
+          iteration.
+        </p>
+        <h2>Why Vanilla?</h2>
+        <p>
+          Mostly, I hate updating dependencies. This site can lie dormant for
+          years. Inevitably, the first thing I need to do when I want to use it
+          again is update a pack of dependencies (often with a breaking change
+          or two). A chore. When all I want to do is play around with some new
+          CSS feature I'm excited about. I can do that with a lot less hassle on
+          <a href="https://codepen.io/">Codepen</a>.
+        </p>
+        <p>
+          But I still want a personal site. I'm intrigued by the idea of the
+          <a href="https://indieweb.org/">IndieWeb</a>. I also want to
+          contribute to the open knowledge base of developer experience that
+          benefitted me so much when I started out. And I started out making
+          sites with no dependencies. How hard would it be to go back to that?
+        </p>
+        <h2>Challenges</h2>
+        <p>It's not that hard, really, but there are some key differences.</p>
+        <h3>No templates</h3>
+        <p>
+          I skipped over this difficulty for now because I'm only launching with
+          one blog post. Even then, it's clear for things like the
+          <code>head</code> element how helpful templated layouts can be. I've
+          used the VS Code
+          <a href="https://code.visualstudio.com/docs/editor/emmet"
+            >Emmet extension</a
+          >
+          for years and it does a good job of scaffolding a basic page. Maybe I
+          can leverage VS Snippets more to customize a shortcut for this site?
+          Another thought is using
+          <a href="https://www.webcomponents.org/">Web Components</a> to create
+          a blog post component with slots for content.
+        </p>
+        <h3>No optimisation</h3>
+        <p>
+          This is a big one if you care about scalability. I could manually
+          minify scripts and styles here but I won't. Similarly, I'm not worried
+          about tree-shaking or bundling in the context of a small, static
+          personal site. I will <s>probably</s> <s>eventually</s> maybe get
+          around to writing an image optimization script I can run in the
+          terminal.
+        </p>
+        <h3>No hot module reloading</h3>
+        <p>
+          I thought I'd miss this the most, but it became second nature to hit
+          <kbd>CMD + R</kbd> every time I switched back to the browser (I should
+          mention, I coded this site while travelling and only had access to my
+          laptop, so there was much more screen switching than with my usual
+          monitor setup). <abbr title="Your mileage may vary">YMMV</abbr>.
+        </p>
+        <p>
+          That said, it still felt like extra work, so I did a bit of searching
+          for an alternative and VS Code came through again with the
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+            >Live Server extension</a
+          >.
+        </p>
+        <h3>Harder to write tests</h3>
+        <p>
+          I almost listed this as "No tests" but you can definitely run basic
+          JavaScript tests without a framework. It is also definitely more work
+          and the kind of work I would like to offload to some AI-based
+          assistant because it's very boilerplate-y. I don't have any JavaScript
+          at the moment, so am considering this a problem for future me.
+        </p>
+        <h2>Benefits</h2>
+        <p>I'm loving this. Would 100% do again.</p>
+        <h3>No bloat</h3>
+        <p>
+          I've done static personal sites with
+          <a href="https://www.11ty.dev/">11ty</a> and
+          <a href="https://www.gatsbyjs.com/">Gatsby</a>. I can't make a fair
+          comparison between them because the sites had different designs and
+          different content. But to 11ty's credit, zero JavaScript was loaded on
+          the production build. My Gatsby production site transferred 112.57 kB
+          of JavaScript. Some of that is definitely me not knowing how to
+          optimize Gatsby. But some of it is the nature of a JS-first framework.
+        </p>
+        <p>
+          Much as I love 11ty's user-facing results, I'm considering dev-facing
+          bloat too. As of this post's publish date, the
+          <a href="https://github.com/11ty/eleventy/network/dependencies"
+            >11ty dependency graph</a
+          >
+          shows 55 dependencies (and those dependencies have dependencies, and
+          so on). There's an
+          <a
+            href="https://github.com/11ty/eleventy/issues/1375#issuecomment-1197354844"
+            >ongoing effort to keep dependencies as low as possible</a
+          >
+          but all dependencies require maintenance. I'm happy to do that work
+          when someone's paying me to do it, but for a static site I tinker with
+          in my free time, zero dependencies is hard to beat.
+        </p>
+        <h3>More time coding</h3>
+        <p>
+          I spent a lot of time on previous iterations of this site pouring over
+          framework configuration documentation and comparing build tools. I
+          didn't much enjoy this time. It was overwhelming and frustrating.
+          Something could do 90% of what I wanted with no trouble at all but the
+          other 10% was a nightmare.
+        </p>
+        <p>
+          On this iteration, I've spent most of my time actual coding the site!
+          Happy diversions included reading HTML and CSS documentation on
+          <a href="https://developer.mozilla.org/en-US/docs/Web">MDN</a> and
+          tutorials from some of my favourite front-end bloggers like
+          <a href="https://www.ishadeed.com/">Ahmad Shadeed</a>,
+          <a href="https://moderncss.dev/">Stephanie Eckles</a>, and
+          <a href="https://set.studio/blog/">Set Studio</a>. Very different from
+          frantically searching Stack Overflow to debug some obscure framework
+          or build tool specific issue.
+        </p>
+        <h3>Deeper understanding of browser capability</h3>
+        <p>
+          Browsers develop at an incredible pace. The introduction of Interop
+          efforts (which I've written about on the
+          <a href="https://blog.silverorange.com/css-interop-is-awesome"
+            >silverorange blog</a
+          >) has seen some truly game-changing features reach production-ready
+          support levels.
+        </p>
+        <p>
+          I want this site to be part playground, part laboratory. My theory is
+          I will be more attuned to browser updates if I rely exclusively on
+          what they can parse without a build step. I experimented with variable
+          fonts, CSS nesting, <code>@layer</code>, <code>:is()</code>,
+          <code>:where()</code>, <code>text-decoration-thickness</code>, and
+          <code>text-underline-offset</code> in the base styles here. I very
+          much wanted to use nesting more, but the foundational styles needed
+          greater browser support. Progressive enhancements like light mode are
+          nested (<a href="https://caniuse.com/?search=nesting"
+            >see which browsers support nesting on caniuse.com</a
+          >).
+        </p>
+        <h2>What's Next?</h2>
+        <p>
+          <strong>More blog content</strong>. I want to find the rough edges of
+          this approach and that's much easier to do with lots of varied
+          content. I'm hoping the patterns that emerge will naturally develop
+          into web components.
+        </p>
+        <p>
+          <strong>Minor enhancements</strong>. I'm not a designer. Luckily,
+          Coolors has a very helpful
+          <a href="https://coolors.co/image-picker"
+            >Image Picker palette generator</a
+          >. I also used their
+          <a href="https://coolors.co/contrast-checker/112a46-acc8e5"
+            >contrast checker</a
+          >
+          enhance the contrast ratio of the teal colour for better readability
+          on the black background.
+        </p>
+        <picture>
+          <source
+            srcset="
+              ../images/magpie-palette-600.webp,
+              ../images/magpie-palette-1200.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ../images/magpie-palette-600.jpg,
+              ../images/magpie-palette-1200.jpg 2x
+            "
+            type="image/jpg"
+          />
+          <img
+            loading="lazy"
+            src="../images/magpie-palette-1200.jpg"
+            alt="Four color palette selected from picture of a magpie in flight. The bird has a black and white body, with iridescent shades of blue and green along its outstretched wings."
+          />
+        </picture>
+        <p>
+          I still want to play around with the colors, maybe using new color
+          spaces or <code>color-mix()</code>. I'd love to find some way to
+          recreate the shimmering glow of those feathers.
+        </p>
+        <p>
+          <strong>A nap</strong>. I did not expect to write such a long first
+          post. I'm tired now.
+        </p>
+      </main>
     </article>
-</body>
+  </body>
 </html>

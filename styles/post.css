@@ -1,28 +1,56 @@
 h1 {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
 main {
-    border-block-start: 10px solid var(--color-accent);
-    margin-block-start: 0;
+  border-block-start: 10px solid var(--color-accent);
+  margin-block-start: 0;
 }
 
 main p:first-of-type {
-    font-size: var(--size-step-1);
-    line-height: 1.2;
+  font-size: var(--size-step-1);
+  line-height: 1.2;
 }
 
 pre {
-    background-color: var(--color-text);
-    color: var(--color-bg-secondary); 
-    padding-inline: var(--flow-space);
+  background-color: var(--color-text);
+  color: var(--color-bg-secondary);
+  padding-inline: var(--flow-space);
 }
 
 figure {
-    margin-block: calc(var(--flow-space) * 2);
+  margin-block: calc(var(--flow-space) * 2);
 }
 
 blockquote {
-    border-inline-start: 10px solid var(--color-text);
-    padding-inline-start: var(--flow-space);
+  border-inline-start: min(2vw, 10px) solid var(--color-accent);
+  padding-inline-start: min(4vw, var(--flow-space));
+
+  & cite {
+    display: inline-block;
+    padding-block-start: calc(var(--flow-space) * 0.5);
+    font-size: 0.8rem;
+    font-weight: 300;
+
+    & a {
+      font-weight: inherit;
+    }
+
+    &::before {
+      content: "\2014";
+      padding-inline-end: 0.25rem;
+    }
+  }
+
+  /* always nice to have examples of how to check for support: https://developer.chrome.com/blog/css-relative-color-syntax/ */
+  @supports (color: rgb(from white r g b)) {
+    padding-inline-end: min(
+      4vw,
+      var(--flow-space)
+    ); /* balance out the inline padding */
+    padding-block: calc(var(--flow-space) * 0.5);
+    background-color: lch(from var(--color-accent) 70% c h / 20%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
