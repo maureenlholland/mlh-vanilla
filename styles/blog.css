@@ -27,6 +27,12 @@ nav {
   gap: 1rem;
 }
 
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: "";
+}
+
 /* to-do: max width on content inside bar? or center once above 1400px screen width? */
 .top-bar {
   display: flex;
@@ -75,4 +81,20 @@ header p + p {
 
 article + article {
   margin-block-start: calc(var(--flow-space) * 2);
+}
+
+/* easter egg web invisible ink or terrible idea? undecided, but worth a try */
+.invisible-ink:not(:focus-within, :has(:hover)),
+.invisible-ink *:not(:hover, :focus) {
+  color: transparent;
+  text-decoration-color: transparent;
+
+  &::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+  }
+}
+
+li.invisible-ink::marker {
+  content: "🔎 ";
 }
