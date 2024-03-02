@@ -13,6 +13,23 @@ main p:first-of-type {
   line-height: 1.2;
 }
 
+body > footer {
+  padding: var(--flow-space);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--flow-space);
+  background-color: var(--color-accent);
+}
+
+body > footer a {
+  --color-accent: var(--color-bg-primary);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
 pre {
   background-color: var(--color-text);
   color: var(--color-bg-secondary);
