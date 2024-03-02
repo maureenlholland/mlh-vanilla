@@ -7,14 +7,20 @@
         <item>
             <title>A Vanilla Personal Site</title>
             <link>https://maureenholland.ca/magpie/a-vanilla-personal-site</link>
-            <guid isPermaLink="false">https://maureenholland.ca/magpie/a-vanilla-personal-site</guid>
-            <pubDate>Sat, 02 Mar 2024 12:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/a-vanilla-personal-site</guid>
+            <pubDate>Sat, 18 Apr 2023 12:00:00 GMT</pubDate>
         </item>
         <item>
             <title>IndieWeb-ificiation</title>
             <link>https://maureenholland.ca/magpie/indieweb-ification</link>
-            <guid isPermaLink="false">https://maureenholland.ca/magpie/indieweb-ification</guid>
-            <pubDate>Sat, 23 Dec 2023 12:00:00 GMT</pubDate>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/indieweb-ification</guid>
+            <pubDate>Sat, 02 Mar 2024 12:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title>RSS Club #1</title>
+            <link>https://maureenholland.ca/magpie/rss-club-1</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/rss-club-1</guid>
+            <pubDate>Sat, 02 Mar 2024 12:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

@@ -211,9 +211,12 @@
           <li>Categories</li>
         </ul>
         <p>
-          Whoops. Fairly easy to add the Author and Canonical URL infoI decided
-          to consider the microformatting experiment a work in progress and move
-          on to creating a web feed.
+          Whoops. Fairly easy to add the Author and Canonical URL info. I might
+          use categories in future but am waiting to see if I manage more than
+          one post a year first. Syndicated copies are cool (<a
+            href="https://indiewebify.me/validate-h-entry/?url=https%3A%2F%2Fadactio.com%2F"
+            >see an example from Jeremy Keith here</a
+          >), but again, a future me implementation.
         </p>
         <h2>RSS</h2>
         <blockquote>
@@ -239,17 +242,24 @@
           I became a big fan of RSS after reading
           <a href="https://timkadlec.com/remembers/2023-02-23-investing-in-rss/"
             >Tim Kadlec's "Investing in RSS" post</a
-          >. I started cultivating a little RSS blog garden of knowledge that I
-          read when I have time or need inspiration. Before this, I would
-          haphazardly subscribe to newsletters and leave them mostly unread in
-          my email inbox.
+          >. Since then, I've been cultivating a little blog garden of knowledge
+          that I read when I have time or need inspiration. Before, I would
+          haphazardly subscribe to newsletters and leave them to die unread
+          deaths in my email inbox.
         </p>
         <p>
           I knew I wanted to include a feed on my blog, but I didn't know how to
           make one without a plugin. That seems a bit of a counter-argument to
-          the "Really Simple" promise of its acronym. My searches for "How to
-          make an RSS Feed" returned more results about pulling from an existing
-          site instead of creating a feed on the site itself.
+          the "Really Simple" promise of its acronym.
+        </p>
+        <p>
+          My searches for "How to make an RSS Feed" returned more results about
+          pulling from an existing site instead of creating a feed on the site
+          itself. Adding to the confusion is the fact a lot of "RSS" is really
+          "Atom", a separate XML-based specification. I decided to start with
+          the most basic RSS feed I could get away with. It's linked in the
+          <code>head</code> and available to view in all its unstyled glory from
+          the <code>footer</code>.
         </p>
         <p>
           If you wish to follow me down the web feed rabbithole, check out the
@@ -332,7 +342,7 @@
     </article>
     <footer>
       <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
-      <a href="./rss.xml">RSS</a>
+      <a href="./feed.xml">RSS</a>
     </footer>
   </body>
 </html>
