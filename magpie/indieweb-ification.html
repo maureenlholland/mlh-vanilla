@@ -36,9 +36,13 @@
     rel="icon"
     sizes="16x16"
     type="image/png"
-  /><link href="../site.webmanifest" rel="manifest" /><title>
-    Magpie | IndieWeb-ification</title
-  ><link href="../styles/global.css" rel="stylesheet" /><link
+  /><link href="../site.webmanifest" rel="manifest" />
+  <title>Magpie | IndieWeb-ification</title>
+  <link
+    rel="canonical"
+    href="https://maureenholland.ca/magpie/indieweb-ification"
+  />
+  <link href="../styles/global.css" rel="stylesheet" /><link
     href="../styles/blog.css"
     rel="stylesheet"
   /><link href="../styles/post.css" rel="stylesheet" />
@@ -57,23 +61,17 @@
           d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
         />
       </svg>
-      <nav>
-        <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="./feeds">Feeds</a></li>
-          <li>
-            <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon</a>
-          </li>
-        </ul>
-      </nav>
+      <a href="./" class="top-bar__link">All Posts</a>
     </header>
     <article class="flow | h-entry">
       <header class="flow container container--xl">
         <h1 class="p-name">IndieWeb-ification</h1>
         <p>
           Published
-          <time class="dt-published" datetime="2024-01-03"
-            >January 3, 2024</time
+          <time class="dt-published" datetime="2024-03-02">March 2, 2024</time>
+          by
+          <a class="p-author h-card" href="https://maureenholland.ca/"
+            >Maureen Holland</a
           >
         </p>
       </header>
@@ -190,13 +188,8 @@
         </blockquote>
         <p>
           Now, am I using any of this interactive potential at the moment? Nope.
-          The
-          <a
-            href="https://github.com/maureenlholland/mlh-vanilla/pull/1/commits/b60332a270c15d725db158c8ad3b171de93bcb37"
-            >addition of microformatting</a
-          >
-          was more of an academic exercise than a practical one. I wanted to see
-          if my understanding matched the
+          The addition of microformatting was more of an academic exercise than
+          a practical one. I wanted to see if my understanding matched the
           <a
             href="https://indiewebify.me/validate-h-entry/?url=https%3A%2F%2Fmaureenholland.ca%2Fmagpie%2Fa-vanilla-personal-site"
             >validator results</a
@@ -209,8 +202,7 @@
           <li>Content</li>
         </ul>
         <p>
-          But then there were a bunch of gaps for information I hadn't included
-          in the original design for post pages:
+          But then there were a bunch of gaps for information I hadn't included:
         </p>
         <ul>
           <li>Author</li>
@@ -219,8 +211,9 @@
           <li>Categories</li>
         </ul>
         <p>
-          I decided to consider the microformatting experiment a work in
-          progress and move on to creating a web feed.
+          Whoops. Fairly easy to add the Author and Canonical URL infoI decided
+          to consider the microformatting experiment a work in progress and move
+          on to creating a web feed.
         </p>
         <h2>RSS</h2>
         <blockquote>
@@ -337,5 +330,9 @@
         </p>
       </main>
     </article>
+    <footer>
+      <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
+      <a href="./rss.xml">RSS</a>
+    </footer>
   </body>
 </html>
