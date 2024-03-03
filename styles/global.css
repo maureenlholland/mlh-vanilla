@@ -154,7 +154,6 @@
   /* remove browser defaults */
   *:not(dialog, fieldset) {
     margin: 0;
-    padding: 0;
   }
 
   /* have controls inherit font */

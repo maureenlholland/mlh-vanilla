@@ -41,6 +41,11 @@ figure {
 }
 
 blockquote {
+  /* proxy safari check, it struggles with logical property values */
+  @supports (height: 100dvh) {
+    border-left: min(2vw, 10px) solid var(--color-accent);
+    padding-left: min(4vw, var(--flow-space));
+  }
   border-inline-start: min(2vw, 10px) solid var(--color-accent);
   padding-inline-start: min(4vw, var(--flow-space));
 
