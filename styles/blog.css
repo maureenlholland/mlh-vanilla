@@ -195,17 +195,6 @@ header {
   text-align: center;
 }
 
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-header nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: "";
-}
-
 /* to-do: max width on content inside bar? or center once above 1400px screen width? */
 .top-bar {
   display: flex;
@@ -238,10 +227,6 @@ header nav ul {
   outline: 3px solid var(--color-bg-primary);
   outline-offset: 1px;
   outline-style: double;
-
-  @media (prefers-color-scheme: light) {
-    outline-color: var(--color-text);
-  }
 }
 
 header p + p {
