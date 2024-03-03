@@ -1,20 +1,193 @@
-/* Palette picked from magpie image and https://coolors.co/image-picker */
-/* todo: iridescent gradient with teal/indigo */
-/* teal: rgb(38,131,143) => (adjusted for better contrast) #02DADE */
-/* indigo: rgb(0, 79, 120)  */
-/* white: rgb(237, 238, 240) */
-/* black: rgb(2, 27, 32) */
-.blog {
-  --color-bg-primary: rgb(2, 27, 32);
-  --color-bg-secondary: rgb(0, 79, 120);
-  --color-text: rgb(237, 238, 240);
-  --color-accent: #02dade;
+/* Palettes picked from bird images and https://coolors.co/image-picker */
+/* todo: iridescent gradient on magpie */
+:root {
+  /* MAGPIE */
+  --teal: #02dade; /* adjusted from rgb(38,131,143) for better contrast */
+  --indigo: rgb(0, 79, 120);
+  --white: rgb(237, 238, 240);
+  --black: rgb(2, 27, 32);
+
+  /* EUROPEAN GOLDFINCH */
+  --school-bus-yellow: #fedd2dff;
+  --raisin-black: #18141bff;
+  --auburn: #a71e22ff;
+  --magnolia: #f5eff7ff;
+
+  /* ROBIN */
+  --fulvous: #df861cff;
+  --jet: #383842ff;
+  --coffee: #62472eff;
+  --bone: #d0c9baff;
+
+  /* HOUSE SPARROW */
+  --linen: #f1e4deff;
+  --van-dyke: #322a27ff;
+  --timberwolf: #d4c8c7ff;
+  --chestnut: #a95137ff;
+
+  /* WOOD PIGEON */
+  --black-olive: #434139ff;
+  --columbia-blue: #c7dbecff;
+  --lavender-blush: #fbecf1ff;
+  --charcoal: #434851ff;
+
+  /* BLUE TIT */
+  --alice-blue: #e2ecf0ff;
+  --yinmn-blue: #385075ff;
+  --outer-space: #444648ff;
+  --straw: #d2d564ff;
+
+  /* BLACKBIRD */
+  --tangerine: #f78505ff;
+  --vanilla: #fef4a6ff;
+  --van-dyke-2: #453b3cff;
+  --smoky-black: #0d0b07ff;
+
+  /* Auto: Magpie + User setting */
+  --color-bg-primary: var(--black);
+  --color-bg-secondary: var(--indigo);
+  --color-text: var(--white);
+  --color-accent: var(--teal);
 
   @media (prefers-color-scheme: light) {
-    --color-bg-primary: rgb(237, 238, 240);
-    --color-bg-secondary: #02dade;
-    --color-text: rgb(2, 27, 32);
-    --color-accent: rgb(0, 79, 120);
+    --color-bg-primary: var(--white);
+    --color-bg-secondary: var(--teal);
+    --color-text: var(--black);
+    --color-accent: var(--indigo);
+  }
+
+  /* Themes */
+  [data-theme="magpie-dark"] {
+    --color-bg-primary: var(--black);
+    --color-bg-secondary: var(--indigo);
+    --color-text: var(--white);
+    --color-accent: var(--teal);
+  }
+
+  [data-theme="magpie-light"] {
+    --color-bg-primary: var(--white);
+    --color-bg-secondary: var(--teal);
+    --color-text: var(--black);
+    --color-accent: var(--indigo);
+  }
+
+  [data-theme="goldfinch"] {
+    --color-bg-primary: var(--auburn);
+    --color-bg-secondary: var(--raisin-black);
+    --color-text: var(--magnolia);
+    --color-accent: var(--school-bus-yellow);
+  }
+
+  [data-theme="robin"] {
+    --color-bg-primary: color-mix(in lch, var(--jet) 10%, var(--coffee));
+    --color-bg-secondary: var(--jet);
+    --color-text: var(--bone);
+    --color-accent: var(--fulvous);
+    font-size: 18px; /* needs larger font base */
+  }
+
+  [data-theme="sparrow"] {
+    --color-bg-primary: color-mix(in lch, white 20%, var(--linen));
+    --color-bg-secondary: color-mix(in lch, white 30%, var(--timberwolf));
+    --color-text: var(--van-dyke);
+    --color-accent: var(--chestnut);
+  }
+
+  [data-theme="pigeon"] {
+    --color-bg-primary: var(--charcoal);
+    --color-bg-secondary: var(--black-olive);
+    --color-text: var(--columbia-blue);
+    --color-accent: var(--lavender-blush);
+  }
+
+  [data-theme="blue-tit"] {
+    --color-bg-primary: var(--yinmn-blue);
+    --color-bg-secondary: var(--outer-space);
+    --color-text: var(--alice-blue);
+    --color-accent: var(--straw);
+  }
+
+  [data-theme="blackbird"] {
+    --color-bg-primary: var(--smoky-black);
+    --color-bg-secondary: var(--van-dyke-2);
+    --color-text: var(--vanilla);
+    --color-accent: var(--tangerine);
+  }
+}
+
+dialog {
+  &::backdrop {
+    background-color: color-mix(in lch, var(--color-bg-secondary), transparent);
+  }
+
+  overscroll-behavior: contain;
+
+  button {
+    display: block;
+    margin-inline-start: auto;
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+  }
+
+  button,
+  fieldset {
+    margin-block-end: var(--flow-space);
+  }
+}
+
+dialog fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flow-space);
+  justify-content: center;
+
+  & legend {
+    flex-basis: 100%;
+  }
+
+  & label {
+    --gap: 10px;
+    flex-basis: calc(25% - var(--gap) * 2);
+    min-width: 200px;
+    padding: var(--gap);
+    accent-color: var(--color-accent);
+    background-color: var(--color-bg-primary);
+    border: 0.5em solid var(--color-accent);
+    color: var(--color-text);
+    font-weight: 700;
+    text-align: center;
+
+    &:has(:checked) {
+      img {
+        border: inherit;
+      }
+    }
+  }
+
+  & img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: var(--gap);
+  }
+
+  & [data-theme^="magpie"] img {
+    object-position: center right;
+  }
+
+  & [data-theme="blackbird"] img {
+    object-position: center left;
+  }
+
+  & input {
+    display: block;
+    margin-inline: auto;
   }
 }
 
@@ -38,13 +211,15 @@ header nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-accent);
   text-align: left;
   padding: 5px 10px;
+}
 
-  @media (prefers-color-scheme: light) {
-    background-color: initial;
-  }
+.top-bar__theme-dialog-button {
+  background-color: transparent;
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
 }
 
 /* todo: make icon size match font size */
@@ -55,14 +230,8 @@ header nav ul {
 }
 
 .top-bar a {
-  color: var(--color-bg-primary);
-  text-decoration-color: var(--color-bg-primary);
-  display: inline-block;
-
-  @media (prefers-color-scheme: light) {
-    color: var(--color-text);
-    text-decoration-color: var(--color-text);
-  }
+  color: var(--color-text);
+  text-decoration-color: var(--color-text);
 }
 
 .top-bar__link:focus-visible {

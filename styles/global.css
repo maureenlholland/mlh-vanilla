@@ -79,7 +79,23 @@
     /* I really enjoyed text-decoration-style: wavy, but it's not animatable */
   }
 
-  a:focus-visible {
+  button,
+  input[type="submit"] {
+    padding: 5px 10px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-accent);
+    box-shadow: none;
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+    transition: color 0.1s, background-color 0.1s;
+  }
+
+  :is(button, input[type="submit"]):where(:hover, a:focus, a:active) {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+  }
+
+  :is(a, button, input[type="submit"]):focus-visible {
     outline: 1px solid var(--color-accent);
     outline-offset: 0.2rem;
   }
@@ -135,18 +151,19 @@
     box-sizing: border-box;
   }
 
-  /* Remove default margin */
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  figure,
-  blockquote,
-  dl,
-  dd {
+  /* remove browser defaults */
+  *:not(dialog, fieldset) {
     margin: 0;
+    padding: 0;
+  }
+
+  /* have controls inherit font */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
   }
 
   /* Make images easier to work with */

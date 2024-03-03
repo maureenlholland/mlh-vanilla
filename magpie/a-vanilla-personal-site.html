@@ -58,20 +58,92 @@ iteration."
     <link rel="stylesheet" href="../styles/post.css" />
   </head>
   <body class="blog">
+    <dialog id="garden-bird-themes__dialog">
+      <button id="garden-bird-themes__dialog-close-button">Close</button>
+      <form method="dialog">
+        <fieldset>
+          <legend>Garden Bird Themes</legend>
+          <label for="magpie-dark" data-theme="magpie-dark"
+            ><img src="../images/theme-magpie.jpg" alt="" />Magpie (Dark)<input
+              type="radio"
+              name="theme"
+              id="magpie-dark"
+              value="magpie-dark"
+          /></label>
+          <label for="magpie-light" data-theme="magpie-light"
+            ><img src="../images/theme-magpie.jpg" alt="" />Magpie (Light)<input
+              type="radio"
+              name="theme"
+              id="magpie-light"
+              value="magpie-light"
+          /></label>
+          <label for="goldfinch" data-theme="goldfinch"
+            ><img src="../images/european-goldfinch.jpg" alt="" />European
+            Goldfinch<input
+              type="radio"
+              name="theme"
+              id="goldfinch"
+              value="goldfinch"
+          /></label>
+          <label for="robin" data-theme="robin"
+            ><img src="../images/robin.jpg" alt="" />Robin<input
+              type="radio"
+              name="theme"
+              id="robin"
+              value="robin"
+          /></label>
+          <label for="sparrow" data-theme="sparrow"
+            ><img src="../images/house-sparrow.jpg" alt="" />House Sparrow<input
+              type="radio"
+              name="theme"
+              id="sparrow"
+              value="sparrow"
+          /></label>
+          <label for="pigeon" data-theme="pigeon"
+            ><img src="../images/wood-pigeon.jpg" alt="" />Wood Pigeon<input
+              type="radio"
+              name="theme"
+              id="pigeon"
+              value="pigeon"
+          /></label>
+          <label for="blue-tit" data-theme="blue-tit"
+            ><img src="../images/blue-tit.jpg" alt="" />Blue Tit<input
+              type="radio"
+              name="theme"
+              id="blue-tit"
+              value="blue-tit"
+          /></label>
+          <label for="blackbird" data-theme="blackbird"
+            ><img src="../images/blackbird.jpg" alt="" />Blackbird<input
+              type="radio"
+              name="theme"
+              id="blackbird"
+              value="blackbird"
+          /></label>
+        </fieldset>
+        <input type="submit" value="Update theme" />
+      </form>
+    </dialog>
     <header class="top-bar">
-      <svg
-        class="top-bar__icon"
-        height="34"
-        role="presentation"
-        version="1.1"
-        viewBox="0 0 1200 1200"
-        width="34"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        id="garden-bird-themes__dialog-open-button"
+        class="top-bar__theme-dialog-button"
       >
-        <path
-          d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
-        />
-      </svg>
+        <svg
+          class="top-bar__icon"
+          height="34"
+          role="presentation"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      </button>
       <a href="./" class="top-bar__link">All Posts</a>
     </header>
     <article class="h-entry | flow">
@@ -283,5 +355,6 @@ iteration."
       <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
       <a href="./feed.xml">RSS</a>
     </footer>
+    <script src="../scripts/garden-bird-themes.js"></script>
   </body>
 </html>
