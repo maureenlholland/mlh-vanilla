@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" /><meta
+    content="IE=edge"
+    http-equiv="X-UA-Compatible"
+  /><meta content="width=device-width,initial-scale=1" name="viewport" />
+  <meta name="author" content="Maureen Holland" />
+  <meta
+    name="description"
+    content="This is a catch-all post for a bunch of miscellaneous updates I've
+      been meaning to do since April: rel=me, microformatting, and RSS."
+  />
+  <meta property="og:title" content="Magpie | IndieWeb-ification" />
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:description"
+    content="This is a catch-all post for a bunch of miscellaneous updates I've
+      been meaning to do since April: rel=me, microformatting, and RSS."
+  />
+  <meta property="og:image" content="../images/meta/magpie.jpg" />
+  <meta
+    property="og:url"
+    content="https://maureenholland.ca/magpie/indieweb-ification"
+  />
+  <link
+    href="../apple-touch-icon.png"
+    rel="apple-touch-icon"
+    sizes="180x180"
+  /><link
+    href="../favicon-32x32.png"
+    rel="icon"
+    sizes="32x32"
+    type="image/png"
+  /><link
+    href="../favicon-16x16.png"
+    rel="icon"
+    sizes="16x16"
+    type="image/png"
+  /><link href="../site.webmanifest" rel="manifest" />
+  <title>Magpie | IndieWeb-ification</title>
+  <link
+    rel="canonical"
+    href="https://maureenholland.ca/magpie/indieweb-ification"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Magpie"
+    href="https://maureenholland.ca/feed.xml"
+  />
+  <link href="../styles/global.css" rel="stylesheet" /><link
+    href="../styles/blog.css"
+    rel="stylesheet"
+  /><link href="../styles/post.css" rel="stylesheet" />
+  <body class="blog">
+    <dialog id="garden-bird-themes__dialog">
+      <button id="garden-bird-themes__dialog-close-button">Close</button>
+      <form method="dialog">
+        <fieldset>
+          <legend>Garden Bird Themes</legend>
+          <label for="magpie-dark" data-theme="magpie-dark"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Dark)<input
+              type="radio"
+              name="theme"
+              id="magpie-dark"
+              value="magpie-dark"
+          /></label>
+          <label for="magpie-light" data-theme="magpie-light"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Light)<input
+              type="radio"
+              name="theme"
+              id="magpie-light"
+              value="magpie-light"
+          /></label>
+          <label for="goldfinch" data-theme="goldfinch"
+            ><img
+              src="../images/european-goldfinch.jpg"
+              alt="Small bird with shocking pops of yellow on wing feathers and red on face."
+              loading="lazy" />European Goldfinch<input
+              type="radio"
+              name="theme"
+              id="goldfinch"
+              value="goldfinch"
+          /></label>
+          <label for="robin" data-theme="robin"
+            ><img
+              src="../images/robin.jpg"
+              alt="A small, round brown bird, the breast more orange than red."
+              loading="lazy" />Robin<input
+              type="radio"
+              name="theme"
+              id="robin"
+              value="robin"
+          /></label>
+          <label for="sparrow" data-theme="sparrow"
+            ><img
+              src="../images/house-sparrow.jpg"
+              alt="Small brown and white bird with black beak and throat."
+              loading="lazy" />House Sparrow<input
+              type="radio"
+              name="theme"
+              id="sparrow"
+              value="sparrow"
+          /></label>
+          <label for="pigeon" data-theme="pigeon"
+            ><img
+              src="../images/wood-pigeon.jpg"
+              alt="Medium-large bird with soft gray-blue head, white accents, and a rosy brown breast."
+              loading="lazy" />Wood Pigeon<input
+              type="radio"
+              name="theme"
+              id="pigeon"
+              value="pigeon"
+          /></label>
+          <label for="blue-tit" data-theme="blue-tit"
+            ><img
+              src="../images/blue-tit.jpg"
+              alt="Small blue and white bird with a bright yellow breast."
+              loading="lazy" />Blue Tit<input
+              type="radio"
+              name="theme"
+              id="blue-tit"
+              value="blue-tit"
+          /></label>
+          <label for="blackbird" data-theme="blackbird"
+            ><img
+              src="../images/blackbird.jpg"
+              alt="Medium sized bird with all-black feathers, an orange beak, and pale yellow eyes."
+              loading="lazy" />Blackbird<input
+              type="radio"
+              name="theme"
+              id="blackbird"
+              value="blackbird"
+          /></label>
+        </fieldset>
+        <input type="submit" value="Update theme" />
+      </form>
+    </dialog>
+    <header class="top-bar">
+      <button
+        id="garden-bird-themes__dialog-open-button"
+        class="top-bar__theme-dialog-button"
+      >
+        <svg
+          class="top-bar__icon"
+          height="34"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Garden Bird Themes</title>
+          <path
+            fill="currentColor"
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      </button>
+      <a href="./" class="top-bar__link">All Posts</a>
+    </header>
+    <article class="flow | h-entry">
+      <header class="flow container container--xl">
+        <h1 class="p-name">IndieWeb-ification</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2024-03-03">March 3, 2024</time>
+          by
+          <a class="p-author h-card" href="https://maureenholland.ca/"
+            >Maureen Holland</a
+          >
+        </p>
+      </header>
+      <main class="flow container e-content |">
+        <p>
+          This is a catch-all post for a bunch of miscellaneous updates I've
+          been meaning to do since last April: rel=me, microformatting, RSS, and
+          garden bird themes.
+          <small
+            >(Sidenote: if you want to test the resilience of your blog post
+            styling, try titling one "IndieWeb-ification")</small
+          >
+        </p>
+        <h2>What's the IndieWeb?</h2>
+        <blockquote>
+          The IndieWeb is a community of independent and personal websites
+          connected by simple standards, based on the principles of: owning your
+          domain and using it as your primary identity, publishing on your own
+          site (optionally syndicating elsewhere), and owning your data.
+          <footer>
+            <cite><a href="https://indieweb.org/">IndieWeb: Home</a></cite>
+          </footer>
+        </blockquote>
+        <p>
+          I bought my domain on <a href="https://www.hover.com/">Hover</a> in
+          2016. It costs $15.99 USD per year.
+        </p>
+        <p>
+          I use <a href="https://pages.github.com/">GitHub pages</a> for hosting
+          because it's free and convenient (but I've had good experiences with
+          <a href="https://www.greengeeks.com/">GreenGeeks</a> in the past and
+          would definitely go back if I decide I want to pay for hosting again).
+        </p>
+        <p>
+          Technically, that's it! I've been IndieWeb for years without knowing!
+        </p>
+        <p>
+          It's important to note that you can build the site however the heck
+          you want. There's no need to avoid dependencies like the plague (a
+          personal preference of mine). But now I know I've got the essentials
+          covered, I also want to add a few of the optional features mentioned
+          in their
+          <a href="https://indieweb.org/Getting_Started">Getting Started</a>
+          page.
+        </p>
+        <h2><code>rel="me"</code></h2>
+        <p>
+          It's not too hard to consider this site as my primary identity because
+          I abandoned Facebook and Twitter years ago. I do exist on Mastodon
+          though, and wanted to figure out how to get the green background and
+          checkmark on my Mastodon profile for my personal homepage link.
+        </p>
+        <p>
+          <strong>The problem:</strong> there was no indication from my personal
+          site that my social Mastodon link was representing <em>me</em> instead
+          of some other Mastodon user.
+        </p>
+        <p>
+          <strong>The fix:</strong> add <code>rel="me"</code> to my homepage
+          social link.
+        </p>
+        <figure>
+          <img
+            src="../images/rel-me-markup.png"
+            alt="Firefox DevTools open to inspect anchor element with 'Mastodon' text. Focus around 'rel=me' attribute in markup."
+            loading="lazy"
+          />
+          <figcaption>Personal homepage Mastodon link</figcaption>
+        </figure>
+        <p>
+          I then needed to remove and re-add the field in Mastodon to trigger a
+          verification check with the new markup.
+        </p>
+        <figure>
+          <img
+            src="../images/rel-me-website.png"
+            alt="Fields in Mastodon profile. Joined: Mar 07, 2023. GitHub: github.com/maureenlholland (not verified). Pronouns: she/her. Personal Site: maureenholland.ca (verified!). Employer: silverorange.com"
+            loading="lazy"
+          />
+          <figcaption>
+            Mastodon profile with verified personal homepage link
+          </figcaption>
+        </figure>
+        <p>I live for small victories.</p>
+        <p>
+          So I decided to verify my GitHub link as well. This involved heading
+          to my GitHub page and editing the profile to add my Mastodon social
+          link (no need for <code>rel="me"</code> in the GitHub profile,
+          although it's a good idea to include it on your personal site GitHub
+          URL). One remove/re-add field link dance on Mastodon later and I had
+          doubled my number of verified links.
+        </p>
+        <figure>
+          <img
+            src="../images/gh-social-link.png"
+            alt="Fields in Mastodon profile, now with both Personal Site and GitHub links verified."
+            loading="lazy"
+          />
+          <figcaption>Mastodon profile with verified GitHub link</figcaption>
+        </figure>
+        <h2>Microformatting</h2>
+        <blockquote>
+          This will allow other people's software to easily read and understand
+          your content. This is useful for a variety of things like recognizing
+          comments, likes, reposts, and displaying reply-contexts for your
+          posts.
+          <footer>
+            <cite
+              ><a
+                href="https://indieweb.org/Getting_Started#Add_microformats_to_your_content"
+                >IndieWeb: Getting Started</a
+              ></cite
+            >
+          </footer>
+        </blockquote>
+        <p>
+          Now, am I using any of this interactive potential at the moment? Nope.
+          The addition of microformatting was more of an academic exercise than
+          a practical one. I wanted to see if my understanding matched the
+          <a
+            href="https://indiewebify.me/validate-h-entry/?url=https%3A%2F%2Fmaureenholland.ca%2Fmagpie%2Fa-vanilla-personal-site"
+            >validator results</a
+          >.
+        </p>
+        <p>It was a semi-success. The following information was validated:</p>
+        <ul>
+          <li>Name</li>
+          <li>Date Published</li>
+          <li>Content</li>
+        </ul>
+        <p>
+          But then there were a bunch of gaps for information I hadn't included:
+        </p>
+        <ul>
+          <li>Author</li>
+          <li>Canonicial URL</li>
+          <li>Syndicated Copies</li>
+          <li>Categories</li>
+        </ul>
+        <p>
+          Whoops. Fairly easy to add the Author and Canonical URL info. I might
+          use categories in future but am waiting to see if I manage more than
+          one post a year first. Syndicated copies are cool (<a
+            href="https://indiewebify.me/validate-h-entry/?url=https%3A%2F%2Fadactio.com%2F"
+            >see an example from Jeremy Keith here</a
+          >), but again, a future me implementation.
+        </p>
+        <h2>RSS</h2>
+        <blockquote>
+          Using an RSS reader is a little like using Twitter or Facebook, but
+          where you’re totally in control. It’s the same in that you have a
+          stream of the latest content. But unlike those platforms, RSS is
+          decentralised. Nobody gets all of that data in one place, so nobody
+          can use it to nudge your behaviour.
+          <footer>
+            <cite
+              ><a
+                href="https://interconnected.org/home/2020/07/29/improving_rss"
+                >Matt Webb</a
+              ></cite
+            >
+          </footer>
+        </blockquote>
+        <p>
+          RSS stands for Really Simple Syndication or Rich Site Summary. It's
+          the specification that brought us podcasts.
+        </p>
+        <p>
+          I became a big fan of RSS after reading
+          <a href="https://timkadlec.com/remembers/2023-02-23-investing-in-rss/"
+            >Tim Kadlec's "Investing in RSS" post</a
+          >. Since then, I've been cultivating a little blog garden of knowledge
+          that I read when I have time or need inspiration. Before, I would
+          haphazardly subscribe to newsletters and leave them to die unread
+          deaths in my email inbox.
+        </p>
+        <p>
+          I knew I wanted to include a feed on my blog, but I didn't know how to
+          make one without a plugin. That seems a bit of a counter-argument to
+          the "Really Simple" promise of its acronym.
+        </p>
+        <p>
+          My searches for "How to make an RSS Feed" returned more results about
+          pulling from an existing site instead of creating a feed on the site
+          itself. Adding to the confusion is the fact a lot of "RSS" is really
+          "Atom", a separate XML-based specification. I decided to start with
+          the most basic RSS feed I could get away with. It's linked in the
+          <code>head</code> and available to view in all its unstyled glory from
+          the <code>footer</code>.
+        </p>
+        <p>
+          If you wish to follow me down the web feed rabbithole, check out the
+          resources listed in the following section.
+        </p>
+        <details>
+          <summary>Reading List: Web Feeds</summary>
+          <ul>
+            <li><a href="https://aboutfeeds.com/">About Feeds</a></li>
+            <li>
+              <a
+                href="https://css-tricks.com/working-with-web-feeds-its-more-than-rss/"
+                >Working with web feeds: it's more than RSS</a
+              >
+            </li>
+            <li>
+              <a href="https://daverupert.com/atom.xml"
+                >Dave Rupert's Web Feed</a
+              >
+              (I didn't know you could
+              <a href="https://darekkay.com/blog/rss-styling/"
+                >style a feed page</a
+              >!)
+            </li>
+            <li>
+              <a href="https://chriscoyier.net/2024/01/13/exposed-rss/"
+                >Exposed RSS</a
+              >
+            </li>
+            <li>
+              <a href="https://kevquirk.com/dont-change-your-rss-url"
+                >Don't change your RSS URL</a
+              >
+            </li>
+            <li class="invisible-ink">
+              <a href="https://daverupert.com/2018/01/welcome-to-rss-club/"
+                >Styled with invisible ink: Welcome to RSS Club</a
+              >
+            </li>
+            <li>
+              Specifications:
+              <ul>
+                <li>
+                  <a href="https://www.rssboard.org/rss-specification"
+                    >RSS 2.0</a
+                  >
+                </li>
+                <li>
+                  <a href="https://datatracker.ietf.org/doc/html/rfc4287"
+                    >Atom</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+
+        <h2>Garden Bird Themes</h2>
+        <p>
+          This has nothing to do with the IndieWeb but I love
+          <a href="https://mxb.dev/blog/color-theme-switcher/"
+            >Max Böck's Mario Kart themes</a
+          >
+          and wanted to do something similar here.
+        </p>
+        <p>
+          I chose birds based on what I remembered seeing in our garden in the
+          UK. All images are from Creative Commons license filtered search.
+        </p>
+        <p>
+          If your browser supports the <code>dialog</code> element, you can open
+          the theme modal by clicking the magpie icon in the header.
+        </p>
+
+        <h2>Good Enough</h2>
+        <p>
+          Oh boy, hardest part of writing a blog post is definitely deciding
+          when it's done.
+        </p>
+        <p>
+          I've been fussing with this thing since Christmas and finally realized
+          it was never going to be exactly what I wanted it to be.
+        </p>
+        <p>
+          Sometimes, good enough is enough. I'm not a multi-tasker. I have to
+          finish a thing before moving onto the next. And it's time to start the
+          next thing.
+        </p>
+      </main>
+    </article>
+    <footer>
+      <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
+      <a href="./feed.xml">RSS</a>
+    </footer>
+    <script src="../scripts/garden-bird-themes.js"></script>
+  </body>
+</html>

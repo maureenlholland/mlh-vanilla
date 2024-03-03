@@ -2,129 +2,173 @@
 
 /* note: second src url is a fallback using legacy syntax */
 @font-face {
-	font-family: 'Josefin Sans';
-	src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype') tech('variations');
-	src: url('../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype-variations');
-	font-weight: 100 700;
+  font-family: "Josefin Sans";
+  src: url("../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf")
+    format("truetype") tech("variations");
+  src: url("../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 700;
 }
 
 /* Elements */
 @layer base {
-    :root {
-        --line-length-max: 50ch;
-        --flow-space: 1em;
-        --size-step-0: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
-        --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
-        --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
-        --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
-        --font-stack: 'Josefin Sans', system-ui, sans-serif;
-    }
+  :root {
+    --line-length-max: 50ch;
+    --flow-space: 1em;
+    --container-block-spacing: min(3rem, 8vh);
+    --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+    --size-step-1: clamp(1.33rem, calc(1.16rem + 0.85vw), 1.82rem);
+    --size-step-2: clamp(1.78rem, calc(1.37rem + 2.03vw), 2.95rem);
+    --size-step-3: clamp(2.37rem, calc(1.54rem + 4.17vw), 4.76rem);
+    --font-stack: "Josefin Sans", system-ui, sans-serif;
+  }
 
-    body {
-        background-color: var(--color-bg-primary);
-        color: var(--color-text);
-        font-family: var(--font-stack);
-        font-size: var(--size-step-0);
-        line-height: 1.5;
-    }
-    
-    h1, h2, h3, h4 {
-        --flow-space: 2em;
-        font-weight: 700;
-        line-height: 1;
-    }
-    
-    h1 {
-        text-align: center;
-        font-size: var(--size-step-3);
-        text-transform: uppercase;
-    }
-    
-    h2 {
-        font-size: var(--size-step-1);
-    }
-    
-    a {
-        color: var(--color-accent);
-        font-weight: 500;
-        text-underline-offset: 0.1rem;
-        text-underline-position: from-font;
-        text-decoration-color: var(--color-accent);
-        text-decoration-thickness: 0.1rem;
-        transition: color 0.1s, text-decoration-thickness 0.1s, text-underline-offset 0.1s;
-    }
-    
-    a:hover,
-    a:focus,
-    a:active { 
-        color: var(--color-text);
-        text-underline-offset: 0.2rem;
-        text-decoration-thickness: 0.2rem;
-        /* I really enjoyed text-decoration-style: wavy, but it's not animatable */
-    }
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text);
+    font-family: var(--font-stack);
+    font-size: var(--size-step-0);
+    line-height: 1.5;
+  }
 
-    a:focus-visible {
-        outline: 1px solid var(--color-accent);
-        outline-offset: 0.2rem;
-    }
-    
-    :is(blockquote, img) + figcaption {
-        font-weight: 100;
-        text-align: right;
-    }
-}   
-    
+  h1,
+  h2,
+  h3,
+  h4 {
+    --flow-space: 2em;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: var(--size-step-3);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: var(--size-step-1);
+  }
+
+  /* avoid single word on new line */
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--color-accent);
+    font-weight: 500;
+    text-underline-offset: 0.1rem;
+    text-underline-position: from-font;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 0.1rem;
+    transition: color 0.1s, text-decoration-thickness 0.1s,
+      text-underline-offset 0.1s;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--color-text);
+    text-underline-offset: 0.2rem;
+    text-decoration-thickness: 0.2rem;
+    /* I really enjoyed text-decoration-style: wavy, but it's not animatable */
+  }
+
+  button,
+  input[type="submit"] {
+    padding: 5px 10px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-accent);
+    box-shadow: none;
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+    transition: color 0.1s, background-color 0.1s;
+  }
+
+  :is(button, input[type="submit"]):where(:hover, a:focus, a:active) {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+  }
+
+  :is(a, button, input[type="submit"]):focus-visible {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 0.2rem;
+  }
+
+  code {
+    background-color: var(--color-accent);
+    border-radius: 4px;
+    color: var(--color-bg-primary);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0.2em;
+  }
+
+  :is(blockquote, img) + figcaption {
+    font-weight: 100;
+    text-align: right;
+  }
+}
+
 /* Utils */
 @layer util {
-    /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
-    .container {
-        width: min(100vw - 4rem, var(--container-max, var(--line-length-max)) );
-        margin-inline: auto;
-        padding-block-start: min(3rem, 10vh);
-        padding-block-end: min(3rem, 10vh);
-    }
-    
-    .container--xl {
-        --container-max: 62.5rem;
-    }
-    
-    /* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
-    .flow > * + * {
-        margin-block-start: var(--flow-space);
-    }
-    
-    :is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
-        --flow-space: 0.5em;
-    }
+  /* Thanks to Stephanie Eckles: https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/ */
+  .container {
+    width: min(
+      100vw - clamp(32px, 10%, 4rem),
+      var(--container-max, var(--line-length-max))
+    );
+    margin-inline: auto;
+    padding-block-start: var(--container-block-spacing);
+    padding-block-end: var(--container-block-spacing);
+  }
+
+  .container--xl {
+    --container-max: 62.5rem;
+  }
+
+  /* Thanks to Andy Bell: https://andy-bell.co.uk/my-favourite-3-lines-of-css/ */
+  .flow > * + * {
+    margin-block-start: var(--flow-space);
+  }
+
+  :is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
+    --flow-space: 0.5em;
+  }
 }
 
 /* A pared-down version of Andy Bell's reset: https://andy-bell.co.uk/a-modern-css-reset/ */
 @layer reset {
-    /* Box sizing rules */
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-    /* Remove default margin */
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    figure,
-    blockquote,
-    dl,
-    dd {
-        margin: 0;
-    }
+  /* remove browser defaults */
+  *:not(dialog, fieldset) {
+    margin: 0;
+  }
 
-    /* Make images easier to work with */
-    img,
-    picture {
-        max-width: 100%;
-        display: block;
-    }
+  /* have controls inherit font */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
 }

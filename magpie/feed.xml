@@ -1,0 +1,33 @@
+<rss version="2.0">
+    <channel>
+        <title>Magpie</title>
+        <link>https://maureenholland.ca/magpie/</link>
+        <description>Blog of writer and web developer Maureen Holland. Untidy nest of shiny things.</description>
+        <language>en-ca</language>
+        <item>
+            <title>A Vanilla Personal Site</title>
+            <link>https://maureenholland.ca/magpie/a-vanilla-personal-site</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/a-vanilla-personal-site</guid>
+            <pubDate>Sat, 18 Apr 2023 12:00:00 GMT</pubDate>
+            <description>I rebuild my personal site every few years. This time, I decided I
+          wanted to go as minimal as possible. It's been the most enjoyable
+          iteration.</description>
+        </item>
+        <item>
+            <title>IndieWeb-ificiation</title>
+            <link>https://maureenholland.ca/magpie/indieweb-ification</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/indieweb-ification</guid>
+            <pubDate>Sun, 03 Mar 2024 12:00:00 GMT</pubDate>
+            <description>This is a catch-all post for a bunch of miscellaneous updates I've
+          been meaning to do since last April: rel=me, microformatting, RSS, and
+          garden bird themes.</description>
+        </item>
+        <item>
+            <title>RSS Club #1</title>
+            <link>https://maureenholland.ca/magpie/rss-club-1</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/rss-club-1</guid>
+            <pubDate>Sun, 03 Mar 2024 12:00:00 GMT</pubDate>
+            <description>What makes me a good front-end developer?</description>
+        </item>
+    </channel>
+</rss>
