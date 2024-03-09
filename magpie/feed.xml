@@ -30,5 +30,12 @@
             <pubDate>Sun, 03 Mar 2024 12:00:00 GMT</pubDate>
             <description>What makes me a good front-end developer?</description>
         </item>
+        <item>
+            <title>Thoughts on International Women's Day</title>
+            <link>https://maureenholland.ca/magpie/thoughts-on-international-womens-day</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/thoughts-on-international-womens-day</guid>
+            <pubDate>Sat, 09 Mar 2024 12:00:00 GMT</pubDate>
+            <description>I have mixed thoughts on International Women's Day, perhaps best encapsulated by the gender pay gap bot that notes discrepancies between a company's social media messages and real-world actions.</description>
+        </item>
     </channel>
 </rss>
