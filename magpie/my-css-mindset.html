@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Maureen Holland" />
+    <meta
+      name="description"
+      content="I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something here only to find it was now broken there."
+    />
+    <meta property="og:title" content="Magpie | My CSS Mindset" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something here only to find it was now broken there."
+    />
+    <meta
+      property="og:image"
+      content="https://maureenholland.ca/images/meta/magpie.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://maureenholland.ca/magpie/my-css-mindset"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <title>Magpie | My CSS Mindset</title>
+    <link
+      rel="canonical"
+      href="https://maureenholland.ca/magpie/my-css-mindset"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Magpie"
+      href="https://maureenholland.ca/magpie/feed.xml"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+  </head>
+  <body class="blog">
+    <dialog id="garden-bird-themes__dialog">
+      <button id="garden-bird-themes__dialog-close-button">Close</button>
+      <form method="dialog">
+        <fieldset>
+          <legend>Garden Bird Themes</legend>
+          <label for="magpie-dark" data-theme="magpie-dark"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Dark)<input
+              type="radio"
+              name="theme"
+              id="magpie-dark"
+              value="magpie-dark"
+          /></label>
+          <label for="magpie-light" data-theme="magpie-light"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Light)<input
+              type="radio"
+              name="theme"
+              id="magpie-light"
+              value="magpie-light"
+          /></label>
+          <label for="goldfinch" data-theme="goldfinch"
+            ><img
+              src="../images/european-goldfinch.jpg"
+              alt="Small bird with shocking pops of yellow on wing feathers and red on face."
+              loading="lazy" />European Goldfinch<input
+              type="radio"
+              name="theme"
+              id="goldfinch"
+              value="goldfinch"
+          /></label>
+          <label for="robin" data-theme="robin"
+            ><img
+              src="../images/robin.jpg"
+              alt="A small, round brown bird, the breast more orange than red."
+              loading="lazy" />Robin<input
+              type="radio"
+              name="theme"
+              id="robin"
+              value="robin"
+          /></label>
+          <label for="sparrow" data-theme="sparrow"
+            ><img
+              src="../images/house-sparrow.jpg"
+              alt="Small brown and white bird with black beak and throat."
+              loading="lazy" />House Sparrow<input
+              type="radio"
+              name="theme"
+              id="sparrow"
+              value="sparrow"
+          /></label>
+          <label for="pigeon" data-theme="pigeon"
+            ><img
+              src="../images/wood-pigeon.jpg"
+              alt="Medium-large bird with soft gray-blue head, white accents, and a rosy brown breast."
+              loading="lazy" />Wood Pigeon<input
+              type="radio"
+              name="theme"
+              id="pigeon"
+              value="pigeon"
+          /></label>
+          <label for="blue-tit" data-theme="blue-tit"
+            ><img
+              src="../images/blue-tit.jpg"
+              alt="Small blue and white bird with a bright yellow breast."
+              loading="lazy" />Blue Tit<input
+              type="radio"
+              name="theme"
+              id="blue-tit"
+              value="blue-tit"
+          /></label>
+          <label for="blackbird" data-theme="blackbird"
+            ><img
+              src="../images/blackbird.jpg"
+              alt="Medium sized bird with all-black feathers, an orange beak, and pale yellow eyes."
+              loading="lazy" />Blackbird<input
+              type="radio"
+              name="theme"
+              id="blackbird"
+              value="blackbird"
+          /></label>
+        </fieldset>
+        <input type="submit" value="Update theme" />
+      </form>
+    </dialog>
+    <header class="top-bar">
+      <button
+        id="garden-bird-themes__dialog-open-button"
+        class="top-bar__theme-dialog-button"
+      >
+        <svg
+          class="top-bar__icon"
+          height="34"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Garden Bird Themes</title>
+          <path
+            fill="currentColor"
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      </button>
+      <a href="./" class="top-bar__link">All Posts</a>
+    </header>
+    <article class="h-entry | flow">
+      <header class="container container--xl flow">
+        <h1 class="p-name">My CSS Mindset</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2024-05-05">May 5, 2024</time>
+          by
+          <a class="p-author h-card" href="https://maureenholland.ca/"
+            >Maureen Holland</a
+          >
+        </p>
+      </header>
+      <main class="e-content | container flow">
+<p>I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something <em>here</em> only to find it was now broken <em>there</em>.</p>
+
+<p>The cycle would only end when I had cobbled together enough mismatched properties and over-specific values to decently resemble the design. At this point, I would back away slowly and hope no change requests came in.</p>
+
+<p>Every significant CSS task would turn into death by a thousand breakpoints. “Make it work” was clearly not working. I needed a new CSS mantra.</p>
+
+<h2>Be Water</h2>
+
+<blockquote data-is-poetry="true">Be Water, My Friend.
+Empty your mind.
+Be formless, shapeless, like water.
+You put water into a cup, it becomes the cup.
+You put water into a bottle, it becomes the bottle.
+You put it into a teapot, it becomes the teapot.
+Now water can flow or it can crash.
+Be water, my friend.<footer><cite><a href="https://brucelee.com/podcast-blog/2016/7/20/2-be-water-my-friend">Bruce Lee</a></cite></footer></blockquote>
+
+<p>Recently, I was thrilled to hear a co-worker of mine say “My mind is at peace when I'm writing CSS.” Five years ago, I would not have known what she was talking about but today I feel the same way. It took a lot of work to get here and I wanted to share a bit of how that happened and what it means in practice.</p>
+
+<p>The essential turning point was taking Heydon Pickering and Andy Bell's <a href="https://every-layout.dev/rudiments/axioms/">Every Layout course</a>  (now available for free!). I was already a fan of both developers from previous exposure to Pickering's <a href="https://inclusive-components.design">Inclusive Components</a> and Bell's <a href="https://learneleventyfromscratch.com/">Learn Eleventy from Scratch</a>. But Every Layout blew my mind. I'd never had CSS explained to me that way. A lot of it went over my head at the time (some of it still does!) but the fundamentals stuck.</p>
+
+<blockquote>
+    As designers, we seek to control the users' experience. But, as John Allsopp wrote in 2000's <a href="https://alistapart.com/article/dao/">The Dao Of Web Design</a>, attempting direct control over the way users consume content on the web is foolhardy. 
+</blockquote>
+
+<p>CSS hates being told what it <em>must</em> do (i.e. <code>width: 487px</code>).</p>
+<p>But it's very happy to take suggestions on what it <em>should</em> do (i.e. <code>width: fit-content</code>).</p>
+<p>Therein lies the secret of CSS development: <a href="https://buildexcellentwebsit.es/">be the browser's mentor, not its micromanager</a>.</p>
+
+<p>I have two guiding principles inspired by this philosophy that have made a huge difference to both the quality of my CSS and the mental state in which I write it.</p>
+
+<ol class="flow">
+    <li class="flow">
+        <p><strong>Build the house before you paint the walls*</strong></p>
+        <p>If a website was a house, semantic HTML elements would be its <a href="https://en.wikipedia.org/wiki/Load-bearing_wall">load bearing walls</a>. CSS would be the paint on those walls. If you need shelter (in web terms, content), you're gonna care about one of those things a whole lot more than the other.</p>
+        <p>The best CSS is an enhancement. A website should still make sense when stripped of its presentational layer:</p>
+        <ul>
+            <li>heading hierarchy is clear</li>
+            <li>links are links</li>
+            <li>buttons are buttons</li>
+            <li>images are appropriately sized</li>
+        </ul>
+        <p>Write the HTML first, without any thought of presentation. When you take off your HTML developer cap and put on your CSS one, you'll notice a lot of containers are already available as layout style hooks.</p>
+    <p>Additionally, you can use the existing HTML structure as a way to focus your CSS decision making. There are often multiple approaches you can take to achieve the same visual result. Not all of these respect the semantic meaning of the document. Narrow down your options by identifying and discarding approaches that clutter or confuse the HTML.</p>
+    <p><small>*I did not invent this metaphor. I heard it early days in my development career and have lost the source.</small></p>
+    </li>
+    <li class="flow">
+        <p><strong>Translation over imitation</strong></p>
+        <p>Designs have meaning. They create visual harmony on the page. That harmony relies on spacing scales and sizing hierarchies and color palettes. The values that make up those cohesive groups cannot be disconnected in the code or they will lose their meaning.</p>
+        <p>This is where custom properties have flourished. Store those values on the <code>:root</code> and let components share access to them.</p>
+        <p><code>#0060df</code> is a single note that wants to be part of <a href="https://en.wikipedia.org/wiki/Chord_(music)">a chord</a>. </p>
+        <p><code>var(--blue-midtone)</code> is human-readable and intentional. It encourages <a href="https://southleft.com/insights/design-systems/the-value-of-design-tokens/">shared language with designers</a> and conveys the relative value of this color within its palette to other developers.</p>
+        <p>Has the designer requested this element to use a dark blue instead of midtone? You no longer need to return to the design file to look up that hex code. <code>var(--blue-midtone)</code> becomes <code>var(--blue-dark)</code> and you're done.</p>
+        <p>Clear communication with your designer is essential at this stage. Understanding what the user wants and needs to do is paramount. You will ask “Why” a lot and your code will be better for it. You'll ask “What happens when...” and the design will be better for it.</p>
+        <p>
+            <a href="https://blog.jim-nielsen.com/2024/making-films-and-making-websites/">The design file is a screenplay; not a film</a>. The finished product is a result of collaboration, not an assembly line.</p>
+    </li>
+</ol>
+
+<p>Do not implement a design without understanding its purpose. It should work for screenreader users and keyboard-only users and visually impaired users. It should fit into a teacup and a bottle and a cup.</p>
+
+<p>Be water, my friend.</p>
+
+<h2>More resources</h2>
+<h3>Articles</h3>
+<ul>
+    <li>Max Böck's <a href="https://mxb.dev/blog/the-css-mindset/">The CSS Mindset</a></li>
+    <li>Ahmad Shadeed's <a href="https://ishadeed.com/article/intrinsic-sizing-in-css/">Intrinsic Sizing in CSS</a></li>
+    <li>Stephanie Eckles' <a href="https://moderncss.dev/">Modern CSS Solutions</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+    <li>Miriam Suzanne's <a href="https://www.youtube.com/watch?v=aHUtMbJw8iA">Why is CSS so weird?</a></li>
+    <li>Manuel Matuzović's <a href="https://www.youtube.com/watch?v=Wno1IhEBTxc">Lost in Translation</a></li>
+    <li>Trys Mudford's <a href="https://www.youtube.com/watch?v=xd6wSHqGreQ">Fluid Responsive Design</a></li>
+</ul>
+<p></p>
+      </main>
+    </article>
+    <footer>
+      <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
+      <a href="./feed.xml">RSS</a>
+    </footer>
+    <script src="../scripts/garden-bird-themes.js"></script>
+  </body>
+</html>
