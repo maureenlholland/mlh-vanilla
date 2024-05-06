@@ -7,13 +7,13 @@
     <meta name="author" content="Maureen Holland" />
     <meta
       name="description"
-      content=""
+      content="I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something here only to find it was now broken there."
     />
     <meta property="og:title" content="Magpie | My CSS Mindset" />
     <meta property="og:type" content="article" />
     <meta
       property="og:description"
-      content=""
+      content="I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something here only to find it was now broken there."
     />
     <meta
       property="og:image"
@@ -181,7 +181,83 @@
         </p>
       </header>
       <main class="e-content | container flow">
-        <!-- content here -->
+<p>I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something <em>here</em> only to find it was now broken <em>there</em>.</p>
+
+<p>The cycle would only end when I had cobbled together enough mismatched properties and over-specific values to decently resemble the design. At this point, I would back away slowly and hope no change requests came in.</p>
+
+<p>Every significant CSS task would turn into death by a thousand breakpoints. “Make it work” was clearly not working. I needed a new CSS mantra.</p>
+
+<h2>Be Water</h2>
+
+<blockquote data-is-poetry="true">Be Water, My Friend.
+Empty your mind.
+Be formless, shapeless, like water.
+You put water into a cup, it becomes the cup.
+You put water into a bottle, it becomes the bottle.
+You put it into a teapot, it becomes the teapot.
+Now water can flow or it can crash.
+Be water, my friend.<footer><cite><a href="https://brucelee.com/podcast-blog/2016/7/20/2-be-water-my-friend">Bruce Lee</a></cite></footer></blockquote>
+
+<p>Recently, I was thrilled to hear a co-worker of mine say “My mind is at peace when I'm writing CSS.” Five years ago, I would not have known what she was talking about but today I feel the same way. It took a lot of work to get here and I wanted to share a bit of how that happened and what it means in practice.</p>
+
+<p>The essential turning point was taking Heydon Pickering and Andy Bell's <a href="https://every-layout.dev/rudiments/axioms/">Every Layout course</a>  (now available for free!). I was already a fan of both developers from previous exposure to Pickering's <a href="https://inclusive-components.design">Inclusive Components</a> and Bell's <a href="https://learneleventyfromscratch.com/">Learn Eleventy from Scratch</a>. But Every Layout blew my mind. I'd never had CSS explained to me that way. A lot of it went over my head at the time (some of it still does!) but the fundamentals stuck.</p>
+
+<blockquote>
+    As designers, we seek to control the users' experience. But, as John Allsopp wrote in 2000's <a href="https://alistapart.com/article/dao/">The Dao Of Web Design</a>, attempting direct control over the way users consume content on the web is foolhardy. 
+</blockquote>
+
+<p>CSS hates being told what it <em>must</em> do (i.e. <code>width: 487px</code>).</p>
+<p>But it's very happy to take suggestions on what it <em>should</em> do (i.e. <code>width: fit-content</code>).</p>
+<p>Therein lies the secret of CSS development: <a href="https://buildexcellentwebsit.es/">be the browser's mentor, not its micromanager</a>.</p>
+
+<p>I have two guiding principles inspired by this philosophy that have made a huge difference to both the quality of my CSS and the mental state in which I write it.</p>
+
+<ol class="flow">
+    <li class="flow">
+        <p><strong>Build the house before you paint the walls*</strong></p>
+        <p>If a website was a house, semantic HTML elements would be its <a href="https://en.wikipedia.org/wiki/Load-bearing_wall">load bearing walls</a>. CSS would be the paint on those walls. If you need shelter (in web terms, content), you're gonna care about one of those things a whole lot more than the other.</p>
+        <p>The best CSS is an enhancement. A website should still make sense when stripped of its presentational layer:</p>
+        <ul>
+            <li>heading hierarchy is clear</li>
+            <li>links are links</li>
+            <li>buttons are buttons</li>
+            <li>images are appropriately sized</li>
+        </ul>
+        <p>Write the HTML first, without any thought of presentation. When you take off your HTML developer cap and put on your CSS one, you'll notice a lot of containers are already available as layout style hooks.</p>
+    <p>Additionally, you can use the existing HTML structure as a way to focus your CSS decision making. There are often multiple approaches you can take to achieve the same visual result. Not all of these respect the semantic meaning of the document. Narrow down your options by identifying and discarding approaches that clutter or confuse the HTML.</p>
+    <p><small>*I did not invent this metaphor. I heard it early days in my development career and have lost the source.</small></p>
+    </li>
+    <li class="flow">
+        <p><strong>Translation over imitation</strong></p>
+        <p>Designs have meaning. They create visual harmony on the page. That harmony relies on spacing scales and sizing hierarchies and color palettes. The values that make up those cohesive groups cannot be disconnected in the code or they will lose their meaning.</p>
+        <p>This is where custom properties have flourished. Store those values on the <code>:root</code> and let components share access to them.</p>
+        <p><code>#0060df</code> is a single note that wants to be part of <a href="https://en.wikipedia.org/wiki/Chord_(music)">a chord</a>. </p>
+        <p><code>var(--blue-midtone)</code> is human-readable and intentional. It encourages <a href="https://southleft.com/insights/design-systems/the-value-of-design-tokens/">shared language with designers</a> and conveys the relative value of this color within its palette to other developers.</p>
+        <p>Has the designer requested this element to use a dark blue instead of midtone? You no longer need to return to the design file to look up that hex code. <code>var(--blue-midtone)</code> becomes <code>var(--blue-dark)</code> and you're done.</p>
+        <p>Clear communication with your designer is essential at this stage. Understanding what the user wants and needs to do is paramount. You will ask “Why” a lot and your code will be better for it. You'll ask “What happens when...” and the design will be better for it.</p>
+        <p>
+            <a href="https://blog.jim-nielsen.com/2024/making-films-and-making-websites/">The design file is a screenplay; not a film</a>. The finished product is a result of collaboration, not an assembly line.</p>
+    </li>
+</ol>
+
+<p>Do not implement a design without understanding its purpose. It should work for screenreader users and keyboard-only users and visually impaired users. It should fit into a teacup and a bottle and a cup.</p>
+
+<p>Be water, my friend.</p>
+
+<h2>More resources</h2>
+<h3>Articles</h3>
+<ul>
+    <li>Max Böck's <a href="https://mxb.dev/blog/the-css-mindset/">The CSS Mindset</a></li>
+    <li>Ahmad Shadeed's <a href="https://ishadeed.com/article/intrinsic-sizing-in-css/">Intrinsic Sizing in CSS</a></li>
+    <li>Stephanie Eckles' <a href="https://moderncss.dev/">Modern CSS Solutions</a></li>
+</ul>
+<h3>Videos</h3>
+<ul>
+    <li>Miriam Suzanne's <a href="https://www.youtube.com/watch?v=aHUtMbJw8iA">Why is CSS so weird?</a></li>
+    <li>Manuel Matuzović's <a href="https://www.youtube.com/watch?v=Wno1IhEBTxc">Lost in Translation</a></li>
+    <li>Trys Mudford's <a href="https://www.youtube.com/watch?v=xd6wSHqGreQ">Fluid Responsive Design</a></li>
+</ul>
+<p></p>
       </main>
     </article>
     <footer>
