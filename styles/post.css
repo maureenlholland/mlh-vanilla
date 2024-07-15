@@ -31,8 +31,20 @@ body > footer a {
 }
 
 pre {
+  overflow-x: scroll;
+
+  code {
+    /* all: revert-layer;  not working as expected */
+    background-color: var(--color-text);
+  }
+  .comment {
+    font-style: italic;
+    /* color: oklch(from var(--color-bg-primary) 85% c h); too much browser inconsistency */
+  }
+  .selector {
+    color: var(--color-bg-secondary);
+  }
   background-color: var(--color-text);
-  color: var(--color-bg-secondary);
   padding-inline: var(--flow-space);
 }
 
