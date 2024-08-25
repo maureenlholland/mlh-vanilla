@@ -48,7 +48,7 @@
             <title>Inheritance Theming with CSS Properties</title>
             <link>https://maureenholland.ca/magpie/inheritance-theming</link>
             <guid isPermaLink="true">https://maureenholland.ca/magpie/inheritance-theming</guid>
-            <pubDate>Sun, 25 August 2024 12:00:00 GMT</pubDate>
+            <pubDate>Sun, 25 Aug 2024 12:00:00 GMT</pubDate>
             <description>I've seen a huge benefit in switching from selector-based to inheritance-based theming at work. CSS custom properties have been the key to unlocking a more flexible and scalable system.</description>
         </item>
     </channel>
