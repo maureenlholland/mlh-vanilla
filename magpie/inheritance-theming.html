@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Maureen Holland" />
+    <meta
+      name="description"
+      content="I've seen a huge benefit in switching from selector-based to inheritance-based theming at work. CSS custom properties have been the key to unlocking a more flexible and scalable system."
+    />
+    <meta property="og:title" content="Magpie | Inheritance Theming with CSS Properties" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="I've seen a huge benefit in switching from selector-based to inheritance-based theming at work. CSS custom properties have been the key to unlocking a more flexible and scalable system."
+    />
+    <meta
+      property="og:image"
+      content="https://maureenholland.ca/images/meta/magpie.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://maureenholland.ca/magpie/inheritance-theming"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <title>Magpie | Inheritance Theming with CSS Properties</title>
+    <link
+      rel="canonical"
+      href="https://maureenholland.ca/magpie/inheritance-theming"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Magpie"
+      href="https://maureenholland.ca/magpie/feed.xml"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+  </head>
+  <body class="blog">
+    <dialog id="garden-bird-themes__dialog">
+      <button id="garden-bird-themes__dialog-close-button">Close</button>
+      <form method="dialog">
+        <fieldset>
+          <legend>Garden Bird Themes</legend>
+          <label for="magpie-dark" data-theme="magpie-dark"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Dark)<input
+              type="radio"
+              name="theme"
+              id="magpie-dark"
+              value="magpie-dark"
+          /></label>
+          <label for="magpie-light" data-theme="magpie-light"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Light)<input
+              type="radio"
+              name="theme"
+              id="magpie-light"
+              value="magpie-light"
+          /></label>
+          <label for="goldfinch" data-theme="goldfinch"
+            ><img
+              src="../images/european-goldfinch.jpg"
+              alt="Small bird with shocking pops of yellow on wing feathers and red on face."
+              loading="lazy" />European Goldfinch<input
+              type="radio"
+              name="theme"
+              id="goldfinch"
+              value="goldfinch"
+          /></label>
+          <label for="robin" data-theme="robin"
+            ><img
+              src="../images/robin.jpg"
+              alt="A small, round brown bird, the breast more orange than red."
+              loading="lazy" />Robin<input
+              type="radio"
+              name="theme"
+              id="robin"
+              value="robin"
+          /></label>
+          <label for="sparrow" data-theme="sparrow"
+            ><img
+              src="../images/house-sparrow.jpg"
+              alt="Small brown and white bird with black beak and throat."
+              loading="lazy" />House Sparrow<input
+              type="radio"
+              name="theme"
+              id="sparrow"
+              value="sparrow"
+          /></label>
+          <label for="pigeon" data-theme="pigeon"
+            ><img
+              src="../images/wood-pigeon.jpg"
+              alt="Medium-large bird with soft gray-blue head, white accents, and a rosy brown breast."
+              loading="lazy" />Wood Pigeon<input
+              type="radio"
+              name="theme"
+              id="pigeon"
+              value="pigeon"
+          /></label>
+          <label for="blue-tit" data-theme="blue-tit"
+            ><img
+              src="../images/blue-tit.jpg"
+              alt="Small blue and white bird with a bright yellow breast."
+              loading="lazy" />Blue Tit<input
+              type="radio"
+              name="theme"
+              id="blue-tit"
+              value="blue-tit"
+          /></label>
+          <label for="blackbird" data-theme="blackbird"
+            ><img
+              src="../images/blackbird.jpg"
+              alt="Medium sized bird with all-black feathers, an orange beak, and pale yellow eyes."
+              loading="lazy" />Blackbird<input
+              type="radio"
+              name="theme"
+              id="blackbird"
+              value="blackbird"
+          /></label>
+        </fieldset>
+        <input type="submit" value="Update theme" />
+      </form>
+    </dialog>
+    <header class="top-bar">
+      <button
+        id="garden-bird-themes__dialog-open-button"
+        class="top-bar__theme-dialog-button"
+      >
+        <svg
+          class="top-bar__icon"
+          height="34"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Garden Bird Themes</title>
+          <path
+            fill="currentColor"
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      </button>
+      <a href="./" class="top-bar__link">All Posts</a>
+    </header>
+    <article class="h-entry | flow">
+      <header class="container container--xl flow">
+        <h1 class="p-name">Inheritance Theming with CSS Properties</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2024-08-25">August 25, 2024</time>
+          by
+          <a class="p-author h-card" href="https://maureenholland.ca/"
+            >Maureen Holland</a
+          >
+        </p>
+      </header>
+      <main class="e-content | container flow">
+        <p>I've seen a huge benefit in switching from selector-based to inheritance-based theming at work. CSS custom properties have been the key to unlocking a more flexible and scalable system.</p>
+        <h2>Selector-based theming</h2>
+        <p>If you've ever worked with <a href="https://getbem.com/naming/#modifier">BEM</a>, this pattern will be familiar to you. The <code>--[modifier]</code> part is used to change a block's appearance.</p>
+        <pre>
+        <code><span class="comment">
+/* button.css */</span>   
+<span class="selector">.button--1</span> {
+    background-color: red;
+}
+
+<span class="selector">.button--2</span> {
+    background-color: yellow;
+}
+
+<span class="selector">.button--3</span> {
+    background-color: pink;
+}
+
+<span class="selector">.button--4</span> {
+    background-color: green;
+}</code>
+    </pre>
+    <p>I've called this the "selector-based" approach because it's very selector-heavy. This becomes troublesome when there are many themes that need to be applied to many components for two reasons:</p>
+    <ol>
+        <li><strong>It multiples the number of modifiers you need.</strong> If you have 7 themes across 3 components, you need 21 modifier selector classes.</li>
+        <li><strong>It lacks a source of truth.</strong> We're asking components to individually manage color palettes when we really want all components to reference the same palette.</li>
+    </ol>
+    <h2>Inheritance-based theming</h2>
+    <p>Think of the <code>onClick</code> prop in a React <code>Button</code> component. A button always does <em>something</em> on click, but it doesn't need to know every possible thing that could be. We pass that information through the prop.</p>
+    <p>Similarly, a button always has <em>a</em> color palette, but it doesn't need to know every possible palette that could be. We pass that information through the custom property.</p>
+    <p>Custom properties define shared properties according to a higher level theme selector. This is essentially the <a href="https://m3.material.io/foundations/design-tokens/how-to-read-tokens">Material UI design system's context approach</a>, where custom properties used in component styles are "system" tokens and themed values are "reference" tokens.</p>
+    <pre>
+        <code>
+<span class="comment">/* themes.css: define themes */</span>        
+<span class="selector">.theme--1</span> {
+    --primary-color: red;
+}
+
+<span class="selector">.theme--2</span> {
+    --primary-color: yellow;
+}
+
+<span class="selector">.theme--3</span> {
+    --primary-color: pink;
+}
+
+<span class="selector">.theme--4</span> {
+  --primary-color: green;
+}
+
+<span class="comment">// button.css: use themed value</span>
+<span class="selector">.button</span> {
+    background-color: var(--primary-color);
+}
+        </code>
+    </pre>
+    <p>Inheritance-based theming allows us to have a constant number of theme selector modifiers, regardless of how many components they affect, and those themes are all managed from one file.</p>
+    <h2>Comparison</h2>
+    <p>Using the above code snippets as a base, consider how each approach would adapt to the following requests.</p>
+<h3>Theme 2 more components</h3>
+<p>Changes required in selector approach:
+    <ul>
+        <li>Add 4 link modifiers</li>
+        <li>Add 4 icon modifiers</li>
+        <li>Update any links and icons in markup to use the new modifier selectors</li>
+    </ul>
+</p>
+
+<p>Changes required in inheritance approach:
+    <ul>
+        <li>Update link component to use themed property</li>
+        <li>Update icon component to use themed property</li>
+    </ul>
+</p>
+<h3>Add 3 new themes</h3>
+<p>Changes required in selector approach:
+    <ul>
+        <li>Add 3 button modifiers</li>
+        <li>Add 3 link modifiers</li>
+        <li>Add 3 icon modifiers</li>
+    </ul>
+</p>
+
+<p>Changes required in inheritance approach:
+    <ul>
+        <li>Add 3 new themes in themes file</li>
+    </ul>
+</p>
+
+<p>If you want to explore the final code from each approach after those changes, check out this codepen:</p>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Selector-based vs Inheritance-based Theming" src="https://codepen.io/maureenlholland/embed/RwzayzZ?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/maureenlholland/pen/RwzayzZ">
+  Selector-based vs Inheritance-based Theming</a> by Maureen L. Holland (<a href="https://codepen.io/maureenlholland">@maureenlholland</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<p>In the selector approach, we end up with 21 modifier selector classes across 3 files. In the inheritance approach, we end up with 7 modifier selector classes in 1 file.</p>
+<p>Theming needs vary. Sure, you might have some themes for established products meant to live forever. But you also might have some for marketing campaigns meant to die after a week. Or experimental products that tweak their brand colors regularly.</p>
+<p>The extensibility and centralization of inheritance-based theming makes it quick and easy to fulfill new requests and clean up retired themes. If you haven't tried this approach before, I highly recommend it.</p>
+<h2>More resources:</h2>
+<ul>
+  <li>Keith J. Grant's <a href="https://keithjgrant.com/posts/2024/06/a-structured-approach-to-custom-properties/">A structured approach to custom properties</a></li>
+  <li>Set Studio's <a href="https://piccalil.li/blog/how-were-approaching-theming-with-modern-css">How we're approaching theming with modern CSS</a></li>
+  <li>Max Böck's <a href="https://mxb.dev/blog/color-theme-switcher/">Color Theme Switcher</a> (the inspiration for <a href="https://github.com/maureenlholland/mlh-vanilla/blob/main/styles/blog.css#L59">garden bird themes on this blog</a>)</li>
+  <li>Lea Verou's <a href="https://github.com/w3c/csswg-drafts/issues/9992">Proposal for Variable Groups</a> aims to address a common pain point for design systems</li>
+</ul>
+      </main>
+    </article>
+    <footer>
+      <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
+      <a href="./feed.xml">RSS</a>
+    </footer>
+    <script src="../scripts/garden-bird-themes.js"></script>
+  </body>
+</html>

@@ -24,6 +24,7 @@
   }
 
   body {
+    overscroll-behavior: none;
     background-color: var(--color-bg-primary);
     color: var(--color-text);
     font-family: var(--font-stack);

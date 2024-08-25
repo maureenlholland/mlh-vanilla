@@ -44,5 +44,12 @@
             <pubDate>Sun, 05 May 2024 12:00:00 GMT</pubDate>
             <description>I used to have Tim Gunn's catchphrase in my head during CSS development. A steady, insistent echo of “Make it work” encouraged me to brute force a lot of styles into place, condemning myself to a frustrating cycle of fixing something here only to find it was now broken there.</description>
         </item>
+        <item>
+            <title>Inheritance Theming with CSS Properties</title>
+            <link>https://maureenholland.ca/magpie/inheritance-theming</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/inheritance-theming</guid>
+            <pubDate>Sun, 25 August 2024 12:00:00 GMT</pubDate>
+            <description>I've seen a huge benefit in switching from selector-based to inheritance-based theming at work. CSS custom properties have been the key to unlocking a more flexible and scalable system.</description>
+        </item>
     </channel>
 </rss>
