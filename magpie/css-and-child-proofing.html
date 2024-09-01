@@ -7,13 +7,13 @@
     <meta name="author" content="Maureen Holland" />
     <meta
       name="description"
-      content="I have mixed thoughts on International Women's Day, perhaps best encapsulated by the gender pay gap bot that notes discrepancies between a company's social media messages and real-world actions."
+      content="I’ve watched my sister put out a beautiful display of perfectly non-choke-able sized toys and games for her 18-month-old child to play with. Know what the Kid does?"
     />
-    <meta property="og:title" content="Magpie | Thoughts on International Women's Day" />
+    <meta property="og:title" content="Magpie | CSS and Child-Proofing" />
     <meta property="og:type" content="article" />
     <meta
       property="og:description"
-      content="I have mixed thoughts on International Women's Day, perhaps best encapsulated by the gender pay gap bot that notes discrepancies between a company's social media messages and real-world actions."
+      content="I’ve watched my sister put out a beautiful display of perfectly non-choke-able sized toys and games for her 18-month-old child to play with. Know what the Kid does?"
     />
     <meta
       property="og:image"
@@ -21,7 +21,7 @@
     />
     <meta
       property="og:url"
-      content="https://maureenholland.ca/magpie/thoughts-on-international-womens-day"
+      content="https://maureenholland.ca/magpie/css-and-child-proofing"
     />
     <link
       rel="apple-touch-icon"
@@ -41,10 +41,10 @@
       href="../favicon-16x16.png"
     />
     <link rel="manifest" href="../site.webmanifest" />
-    <title>Magpie | Thoughts on International Women's Day</title>
+    <title>Magpie | CSS and Child-Proofing</title>
     <link
       rel="canonical"
-      href="https://maureenholland.ca/magpie/thoughts-on-international-womens-day"
+      href="https://maureenholland.ca/magpie/css-and-child-proofing"
     />
     <link
       rel="alternate"
@@ -170,10 +170,10 @@
     </header>
     <article class="h-entry | flow">
       <header class="container container--xl flow">
-        <h1 class="p-name">Thoughts on International Women's Day</h1>
+        <h1 class="p-name">CSS and Child-Proofing</h1>
         <p>
           Published
-          <time class="dt-published" datetime="2024-03-09">March 9, 2024</time>
+          <time class="dt-published" datetime="2024-09-01">September 1, 2024</time>
           by
           <a class="p-author h-card" href="https://maureenholland.ca/"
             >Maureen Holland</a
@@ -181,20 +181,41 @@
         </p>
       </header>
       <main class="e-content | container flow">
-        <p>I have mixed thoughts on International Women's Day, perhaps best encapsulated by the <a href="https://genderpaygap.app/">gender pay gap bot</a> that notes discrepancies between a company's social media messages and real-world actions.</p>
-        <p>(The bot didn't run this year, I assume because something with the API is now behind a paywall or full of breaking changes or on fire or some such)</p>
-        <p>Another part is simply feeling uncomfortable with a sudden spotlight on my gender, which isn't top of my mind most days. It's kind of like thinking about breathing and then finding it difficult to breathe. Being a woman is part of who I am, but it seems like such a basic part that it's strange to suddenly foreground it.</p>
-        <p>On the other hand: <a href="https://www.cnn.com/2024/01/23/entertainment/ryan-gosling-oscar-nomination-barbie/index.html">patriarchy</a>.</p>
-          <p>Yeah, I don't mind having a day to call out the discrepancy between our ideals and our reality, to acknowledge there's work to be done, and to thank the women, past and present, who agitate for change.</p>
-        <p>My company sometimes sends chocolates to female and non-binary employees to celebrate International Women's Day. Now, I will never turn down free chocolate (nor free pizza, whisky, or trips to Scotland if anyone from work is reading this). It's a kind and thoughtful gesture that takes time to execute. But it is particularly appreciated because it is completely unnecessary.</p>
-        <p>A gesture like that can only be accepted if it is <em>in addition to</em> and not <em>in place of</em> structural equality.</p>
-        <p><a href="https://www.silverorange.com/">silverorange</a> does all the things that matter to me every damn day of the year:</p>
+        <p>I’ve watched my sister put out a beautiful display of perfectly non-choke-able sized toys and games for her 18-month-old child to play with. Know what the Kid does?</p>
+        <p>Goes straight for the plug socket. Figures out how to open the door to the backyard, where there is a pool. Carries her bicycle around and tries to ride the dog.</p>
+        <p>So my sister has bought those little plug covers, built a fence around the pool, and constructed a couch fort for the dog (keeping him out of view, if he chooses to be in the same room as the Kid).</p>
+        <p>What does all this have to do with CSS?</p>
+        <p>Just as there are too many possibilities to account for once the Kid’s in a room, there are too many variables to test for once a design’s on the Web. Child-proofing and writing CSS are about mitigating the worst possible outcomes.</p>
+        <p>Figure out where things will break (i.e. become unreadable or inoperable) and manage those cases. Yes, under optimal circumstances, the Kid will play with her plushy animal mix-and-match game and the design will look like Figma. But you cannot guarantee those circumstances and should not expect them.</p>
+        <p>I’ve learned to write CSS as if my niece is coming to play with it. That means exercising author control in so far as it doesn’t conflict with user control and acknowledging the browser is better positioned to calculate final values than I ever will be.</p>
+        <details>
+            <summary>An incomplete list of things the browser knows that I don’t</summary>
+            <ul>
+                <li>what it can do (feature support)</li>
+                <li>if a resource downloaded</li>
+                <li>what extensions are running</li>
+                <li>if the page is in Reader Mode</li>
+                <li>if the page has been auto-translated</li>
+                <li>screen resolution</li>
+                <li>screen size</li>
+                <li>privacy settings</li>
+                <li>zoom settings</li>
+                <li>font size setting</li>
+                <li>color contrast setting</li>
+                <li>forced colors setting</li>
+                <li>color scheme preference setting</li>
+                <li>transparency preference setting</li>
+                <li>motion preference setting</li>
+                <li>reduced data preference setting</li>
+            </ul>
+        </details>
+        <p>CSS works best when you anticipate the unhappy paths. Watch out for choke hazards and sharp edges and hide the dog and everything will be fine.</p>
+        <h2>More resources:</h2>
         <ul>
-          <li>Share salaries with transparency</li>
-          <li>Provide clear guidance for career progression</li>
-          <li>Have <a href="https://blog.silverorange.com/clarefication">women in leadership roles</a></li>
+            <li>Stephanie Eckles’ <a href="https://moderncss.dev/developing-for-imperfect-future-proofing-css-styles/">Developing for Imperfect: Future Proofing CSS Styles</a></li>
+            <li>Ahmad Shadeed’s <a href="https://defensivecss.dev/">Defensive CSS</a></li>
+            <li>Andy Bell’s <a href="https://buildexcellentwebsit.es/">Be the browser's mentor, not its micromanager</a></li>
         </ul>
-        <p>If your company does not do these things, please don't wait till next year to make changes.</p>
       </main>
     </article>
     <footer>

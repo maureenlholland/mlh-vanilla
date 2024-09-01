@@ -51,5 +51,12 @@
             <pubDate>Sun, 25 Aug 2024 12:00:00 GMT</pubDate>
             <description>I've seen a huge benefit in switching from selector-based to inheritance-based theming at work. CSS custom properties have been the key to unlocking a more flexible and scalable system.</description>
         </item>
+        <item>
+            <title>CSS and Child-Proofing</title>
+            <link>https://maureenholland.ca/magpie/css-and-child-proofing</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/css-and-child-proofing</guid>
+            <pubDate>Sun, 01 Sep 2024 12:00:00 GMT</pubDate>
+            <description>I’ve watched my sister put out a beautiful display of perfectly non-choke-able sized toys and games for her 18-month-old child to play with. Know what the Kid does?</description>
+        </item>
     </channel>
 </rss>
