@@ -65,5 +65,12 @@
             <pubDate>Sun, 26 Jan 2025 12:00:00 GMT</pubDate>
             <description>All these articles popping up about how to delete Facebook and Twitter reminded me I’ve been meaning to do that for years.</description>
         </item>
+        <item>
+            <title>State of the Browser 2025</title>
+            <link>https://maureenholland.ca/magpie/state-of-the-browser-2025</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/state-of-the-browser-2025</guid>
+            <pubDate>Sun, 30 Mar 2025 12:00:00 GMT</pubDate>
+            <description>One of the joys of working in web development is a lot of content relevant to your interests ends up, well, on the web. In particular, a lot of conferences offer online tickets. 99 times out of 100, I go online. But yesterday, I attended State of the Browser in person.</description>
+        </item>
     </channel>
 </rss>
