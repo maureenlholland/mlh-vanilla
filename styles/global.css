@@ -36,7 +36,6 @@
   h2,
   h3,
   h4 {
-    --flow-space: 2em;
     font-weight: 700;
     line-height: 1;
   }
@@ -145,6 +144,16 @@
 
   :is(h1, h2, h3, h4) + :is(h1, h2, h3, h4) {
     --flow-space: 0.5em;
+  }
+  
+  /* avoid as much as possible: https://www.scottohara.me/blog/2023/03/21/visually-hidden-hack.html */
+  .visually-hidden:not(:focus):not(:active):not(:focus-within) {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
   }
 }
 
