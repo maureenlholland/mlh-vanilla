@@ -118,6 +118,10 @@
     font-weight: 100;
     text-align: right;
   }
+
+  li + li {
+    margin-top: calc(var(--flow-space) / 2);
+  }
 }
 
 /* Utils */
