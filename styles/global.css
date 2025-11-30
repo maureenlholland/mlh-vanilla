@@ -119,8 +119,12 @@
     text-align: right;
   }
 
-  li + li {
+  :is(ul, ol) {
     margin-top: calc(var(--flow-space) / 2);
+  }
+
+  li + li {
+    margin-top: calc(var(--flow-space) / 4);
   }
 }
 

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Maureen Holland" />
+    <meta
+      name="description"
+      content="The first line from my notes is “Does anyone wanna hear some a cappella screamo?” Yes, I enjoyed this conference."
+    />
+    <meta property="og:title" content="Magpie | WDC 2025" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="The first line from my notes is “Does anyone wanna hear some a cappella screamo?” Yes, I enjoyed this conference."
+    />
+    <meta
+      property="og:image"
+      content="https://maureenholland.ca/images/meta/magpie.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://maureenholland.ca/magpie/web-dev-conf-2025"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <title>Magpie | WDC 2025</title>
+    <link
+      rel="canonical"
+      href="https://maureenholland.ca/magpie/web-dev-conf-2025"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Magpie"
+      href="https://maureenholland.ca/magpie/feed.xml"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+  </head>
+  <body class="blog">
+    <dialog id="garden-bird-themes__dialog">
+      <button id="garden-bird-themes__dialog-close-button">Close</button>
+      <form method="dialog">
+        <fieldset>
+          <legend>Garden Bird Themes</legend>
+          <label for="magpie-dark" data-theme="magpie-dark"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Dark)<input
+              type="radio"
+              name="theme"
+              id="magpie-dark"
+              value="magpie-dark"
+          /></label>
+          <label for="magpie-light" data-theme="magpie-light"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Light)<input
+              type="radio"
+              name="theme"
+              id="magpie-light"
+              value="magpie-light"
+          /></label>
+          <label for="goldfinch" data-theme="goldfinch"
+            ><img
+              src="../images/european-goldfinch.jpg"
+              alt="Small bird with shocking pops of yellow on wing feathers and red on face."
+              loading="lazy" />European Goldfinch<input
+              type="radio"
+              name="theme"
+              id="goldfinch"
+              value="goldfinch"
+          /></label>
+          <label for="robin" data-theme="robin"
+            ><img
+              src="../images/robin.jpg"
+              alt="A small, round brown bird, the breast more orange than red."
+              loading="lazy" />Robin<input
+              type="radio"
+              name="theme"
+              id="robin"
+              value="robin"
+          /></label>
+          <label for="sparrow" data-theme="sparrow"
+            ><img
+              src="../images/house-sparrow.jpg"
+              alt="Small brown and white bird with black beak and throat."
+              loading="lazy" />House Sparrow<input
+              type="radio"
+              name="theme"
+              id="sparrow"
+              value="sparrow"
+          /></label>
+          <label for="pigeon" data-theme="pigeon"
+            ><img
+              src="../images/wood-pigeon.jpg"
+              alt="Medium-large bird with soft gray-blue head, white accents, and a rosy brown breast."
+              loading="lazy" />Wood Pigeon<input
+              type="radio"
+              name="theme"
+              id="pigeon"
+              value="pigeon"
+          /></label>
+          <label for="blue-tit" data-theme="blue-tit"
+            ><img
+              src="../images/blue-tit.jpg"
+              alt="Small blue and white bird with a bright yellow breast."
+              loading="lazy" />Blue Tit<input
+              type="radio"
+              name="theme"
+              id="blue-tit"
+              value="blue-tit"
+          /></label>
+          <label for="blackbird" data-theme="blackbird"
+            ><img
+              src="../images/blackbird.jpg"
+              alt="Medium sized bird with all-black feathers, an orange beak, and pale yellow eyes."
+              loading="lazy" />Blackbird<input
+              type="radio"
+              name="theme"
+              id="blackbird"
+              value="blackbird"
+          /></label>
+        </fieldset>
+        <input type="submit" value="Update theme" />
+      </form>
+    </dialog>
+    <header class="top-bar">
+      <button
+        id="garden-bird-themes__dialog-open-button"
+        class="top-bar__theme-dialog-button"
+      >
+        <svg
+          class="top-bar__icon"
+          height="34"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Garden Bird Themes</title>
+          <path
+            fill="currentColor"
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      </button>
+      <a href="./" class="top-bar__link">All Posts</a>
+    </header>
+    <article class="h-entry | flow">
+      <header class="container container--xl flow">
+        <h1 class="p-name">WDC 2025</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2025-11-30">November 30, 2025</time>
+          by
+          <a class="p-author h-card" href="https://maureenholland.ca/"
+            >Maureen Holland</a
+          >
+        </p>
+      </header>
+      <main class="e-content | container flow">
+        <p>The first line from my notes is “Does anyone wanna hear some a cappella screamo?” Yes, I enjoyed this conference.</p>
+        <p>Luke Murphy knows how to roll with technical difficulties. They did not, in fact, perform a cappella screamo, but they did a great job MC-ing the event. Kudos also to Alex Older, the other half of Bristol’s Web Dev Conf organizing team. It was a good time.</p>
+        <h2>The time loop: How 2024 Became 2004 (and why we should embrace it), <a href="https://teybannerman.com/" rel="external">Tey Bannerman</a></h2>
+        <blockquote>Joy + Discipline = Unfair Advantage</blockquote>
+        <p>Tey noticed a pattern on his Github contributions. Well, a gaping void, really. He was doing great <a href="https://www.mckinsey.com/about-us/new-at-mckinsey-blog/a-new-world-record-for-formula-e-propelled-by-mckinseys-ai" rel="external">corporate work</a> but wasn’t motivated to build anything for himself anymore. LLMs unlocked that feeling of “I can just create stuff” again.</p>
+        <p>Start small. Hold yourself accountable (or find an accountability buddy). Make stuff that makes you happy.</p>
+        <p><strong>📚 Book recommendation</strong>: <a href="https://davidepstein.com/range/" rel="external">David Epstein’s Range</a></p>
+        <h2>A Website To End All Websites, <a href="https://henry.codes/">Henry Desroches</a></h2>
+        <p>Yes, <em>that</em> Henry Desroches.</p>
+        <p>On today’s web, social platforms are designed for engagement instead of connection: “pens for trapping us and our little piggy attentions.” Henry wants more tooling for “freedom, creativity, independence, and will.”</p>
+        <p>More blogs and RSS and <a href="https://henry.codes/writing/collecting-webmentions/" rel="external">webmentions</a>. More ActivityPub and AT Protocol, and Bridg.ey. More <a href="https://personalsit.es/" rel="external">personal sites</a>.</p>
+        <p><strong>📚 Book recommendation</strong>: <a href="https://archive.org/details/toolsforconvivia0000illi" rel="external">Ivan Illich’s Tools for conviviality</a></p>
+        <h2>Design for Developers, <a href="https://loftio.co.uk/" rel="external">Lex Lofthouse</a></h2>
+        <p>Lex demonstrated the power of guiding your design work with the following principles:</p>
+        <ul>
+            <li>Hierarchy</li>
+            <li>Proximity</li>
+            <li>Contrast</li>
+            <li>Balance</li>
+        </ul>
+        <p>Good anchors for non-designers like myself. Good touchstones for experienced designers like Lex.</p>
+        <p>Also, typography is powerful:</p>
+        <picture>
+          <source
+            srcset="
+              ../images/typography-600.webp,
+              ../images/typography-1200.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            width="600"
+            height="300"
+            loading="lazy"
+            src="../images/typography.jpeg"
+            alt="You will always be mine' is written twice: first in a cutesy cursive font and then in a creepy, all-caps horror font."
+          />
+        </picture>
+        <p>Couple of cool typographic tools I’ve now bookmarked:</p>
+        <ul>
+            <li><a href="https://fontpair.co/" rel="external">fontpair.co</a></li>
+            <li><a href="https://typescale.com/" rel="external">typescale.com</a></li>
+        </ul>
+        <h2><span aria-hidden="true">⚡</span> <span class="visually-hidden">Lightning talk: </span>Rapid-fire advice from a burned out gobshite, <a href="https://scott.is/" rel="external">Scott Riley</a></h2>
+        <p>I was lucky to catch a fuller rendition of Scott’s talk earlier this year at State of the Browser (and his Piccallili course, <a href="https://piccalil.li/mindful-design#enroll">Mindful Design is now on sale!</a>). Here’s a few quotes from this most lightning of lightning talks:</p>
+        <blockquote>Friends don’t let friends use obliques or faux bold</blockquote>
+        <blockquote>Keep a project diary</blockquote>
+        <blockquote>Delete your backlog every three months</blockquote>
+        <p><strong>📚 Book recommendation</strong>: <a href="https://elliotjaystocks.com/books" rel="external">Elliot Jay Stock’s Universal Principles of Typography</a></p>
+        <h2>Death, and how tech forgot about mortality, <a href="https://www.uxmichael.co/">Michael Kibedi</a></h2>
+        <p>A particularly memorable slide: all Michael’s sources of inspiration on this topic.</p>
+        <picture>
+          <source
+            srcset="
+              ../images/inspiration-600.webp,
+              ../images/inspiration-1200.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            width="600"
+            height="300"
+            loading="lazy"
+            src="../images/inspiration.jpeg"
+            alt="On the right, two skeletons in an intimate embrace, an image from X-Ray Portraits (2013) by Saiko Kanda and Mayuka Hayashi. On the left, a wall of text dedicated to writers and artist-researchers who inspired and influenced this talk. Writers: Maggie Appleton, Neda Atanasoski, La Tanya S. Autry, Kimberley Juanita Brown, Simone Browne, Ingrid Burrington, Tina M. Campt, Adrian Daub, Saidiya Hartman, Juliet Hooker, Tamara Kneese, Enuma Okoro, Olia Lialina, Katarszyna Nowaczyk-Basińska, Carl Öhman, Thao Phan, Legacy Russell, Minna Salami, Francesca Sobande, Tonia Sutherland, Tiera Tanksley, Julia Ticona, Suzanne Van Guens, Lauren M. Williams. Artist-Researchers: Jess Allen, Cameron Askin, Neta Bomani, Stephanie Dinkins, Allison Janae Hamilton, Sasha Huber, Vladen Joler, Saiko Kanda and Mayuka Hayashi, Merve Mepa, Mónica de Miranda, Kameelah Janan Rasheed, Alisha B. Wormsley."
+          />
+        </picture>
+        <p>I learned about the <a href="https://www.ae.studio/seanceai" rel="external">grief tech sector</a> through this talk. I don’t feel particularly good about it. Goddamn, people accessing these services are going to be in a vulnerable state and I have pretty much zero faith that the industry will treat their data with respect.</p>
+        <p>Whatever sector you’re in, restore my faith in humanity by considering the following questions from Michael:</p>
+        <ol>
+            <li>What should our service do when a user dies?</li>
+            <li>How will users get their data if our service ends?</li>
+            <li>Will our user’s data be accessible in fifty years?</li>
+        </ol>
+        <p><strong>📚 Book recommendation</strong>: <a href="https://www.tamarakneese.com/books" rel="external">Tamara Kneese’s Death Glitch</a></p>
+        <h2>An Introduction to the World Wide Web for Very Senior Programmers, <a href="https://whitep4nth3r.com/about/" rel="external">Salma Alam-Naylor</a></h2>
+        <p>There’s always one talk I know I’ll never be able to do justice to in writing. This is the one.</p>
+        <picture>
+          <source
+            srcset="
+              ../images/microsoft-menu-600.webp,
+              ../images/microsoft-menu-1200.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            width="600"
+            height="300"
+            loading="lazy"
+            src="../images/microsoft-menu.jpeg"
+            alt="Image map navigation. Microsoft in neon blue letters atop a black half circle with stars. Different areas of the image link to destinations such as 'Microsoft TV', 'ftp.microsoft.com' and 'Facts about the server'."
+          />
+        </picture>
+        <p>I want to call it a tone poem to the dawn of HTML 2.0 in 1995, but I don’t know what a tone poem is. That’s somewhat fitting, as I did not understand most of the references in this talk. That said, Salma is a born presenter and I was happy to be along for the ride.</p>
+        <h2><span aria-hidden="true">⚡</span> <span class="visually-hidden">Lightning talk: </span>How to fix a Gameboy, <a href="https://remysharp.com/" rel="external">Remy Sharp</a></h2>
+        <p><a href="https://retrobyrem.uk/" rel="external">Do I have a gameboy? No. But I know where I can get one if I want one.</a> Remy’s talk was a great reminder of the value of a consumer’s right to repair.</p>
+        <p>Places to start your investigation:</p>
+        <ul>
+            <li>Power</li>
+            <li>Sound</li>
+            <li>Cartridge</li>
+            <li>Screen</li>
+        </ul>
+        <p>Tools you might need:</p>
+        <ul>
+            <li>Isopropyl alcohol</li>
+            <li>Tri-wing screwdriver</li>
+            <li>Soldering iron</li>
+            <li>Multimeter</li>
+        </ul>
+        <h2>Design engineering – from design to engineer, <a href="https://www.jhey.dev/" rel="external">Jhey Tompkins</a></h2>
+        <blockquote>Don’t put the polish before the foundations.</blockquote>
+        <p>Jhey emphasized getting the semantics and functionality right before exploring the razzle-dazzle stuff. He encouraged going on side quests to build out your understanding of web capabilities.</p>
+        <p>Once you have a lot of little things mastered, then you can string all this seemingly random knowledge into a truly knock-out effect.</p>
+        <h2>Wrapping up</h2>
+        <p><a href="https://www.watershed.co.uk/" rel="external">The Watershed</a> may have been my favourite venue so far. I kind of want to go back just to see a movie there.</p>
+        <p>I was pleased with myself for remembering to book accommodation the night before the conference so I wasn’t on a train for 7 hours in addition to socializing for 8 hours. Made a huge difference. (Reminder to future self: the accommodation cost is worth it)</p>
+        <h3>More community conferences! (Buy tickets early)</h3>
+        <ul>
+            <li><a href="https://2026.stateofthebrowser.com/" rel="external">State of the Browser, February 28, 2026</a></li>
+            <li><a href="https://webdayout.com/" rel="external">Web Day Out, March 12, 2026</a></li>
+            <li><a href="https://beyondtellerrand.com/events/dusseldorf-2026" rel="external">Beyond Tellerrand, April 27 & 28, 2026</a></li>
+            <li><a href="https://pixelpioneers.co/" rel="external">Pixel Pioneers, June 19, 2026</a></li>
+        </ul>
+      </main>
+    </article>
+    <footer>
+      <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
+      <a href="./feed.xml">RSS</a>
+    </footer>
+    <script src="../scripts/garden-bird-themes.js"></script>
+  </body>
+</html>

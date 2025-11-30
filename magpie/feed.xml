@@ -93,5 +93,12 @@
             <pubDate>Sun, 07 Sep 2025 12:00:00 GMT</pubDate>
             <description>Walking along Kinder Scout in 2025, it’s easy to forget that these paths weren't always open to the public.</description>
         </item>
+        <item>
+            <title>WDC 2025</title>
+            <link>https://maureenholland.ca/magpie/web-dev-conf-2025</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/web-dev-conf-2025</guid>
+            <pubDate>Sun, 30 Nov 2025 12:00:00 GMT</pubDate>
+            <description>The first line from my notes is “Does anyone wanna hear some a cappella screamo?” Yes, I enjoyed this conference.</description>
+        </item>
     </channel>
 </rss>
