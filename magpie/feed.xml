@@ -100,5 +100,12 @@
             <pubDate>Sun, 30 Nov 2025 12:00:00 GMT</pubDate>
             <description>The first line from my notes is “Does anyone wanna hear some a cappella screamo?” Yes, I enjoyed this conference.</description>
         </item>
+        <item>
+            <title>ffconf 2025</title>
+            <link>https://maureenholland.ca/magpie/ffconf-2025</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/ffconf-2025</guid>
+            <pubDate>Fri, 27 Feb 2026 12:00:00 GMT</pubDate>
+            <description>All conferences should have an ice cream break before the final block of talks. I mean, I had a lot of takeaways from ffconf 2025, but that feels like the headliner.</description>
+        </item>
     </channel>
 </rss>
