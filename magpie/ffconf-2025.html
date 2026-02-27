@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Maureen Holland" />
+    <meta
+      name="description"
+      content="All conferences should have an ice cream break before the final block of talks. I mean, I had a lot of takeaways from ffconf 2025, but that feels like the headliner."
+    />
+    <meta property="og:title" content="Magpie | ffconf 2025" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:description"
+      content="All conferences should have an ice cream break before the final block of talks. I mean, I had a lot of takeaways from ffconf 2025, but that feels like the headliner."
+    />
+    <meta
+      property="og:image"
+      content="https://maureenholland.ca/images/meta/ffconf-2025.jpeg"
+    />
+    <meta
+      property="og:url"
+      content="https://maureenholland.ca/magpie/ffconf-2025"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <title>Magpie | ffconf 2025</title>
+    <link
+      rel="canonical"
+      href="https://maureenholland.ca/magpie/ffconf-2025"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Magpie"
+      href="https://maureenholland.ca/magpie/feed.xml"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+  </head>
+  <body class="blog">
+    <dialog id="garden-bird-themes__dialog">
+      <button id="garden-bird-themes__dialog-close-button">Close</button>
+      <form method="dialog">
+        <fieldset>
+          <legend>Garden Bird Themes</legend>
+          <label for="magpie-dark" data-theme="magpie-dark"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Dark)<input
+              type="radio"
+              name="theme"
+              id="magpie-dark"
+              value="magpie-dark"
+          /></label>
+          <label for="magpie-light" data-theme="magpie-light"
+            ><img
+              src="../images/theme-magpie.jpg"
+              alt="Black and white medium-sized bird with blue iridescent feathers"
+              loading="lazy" />Magpie (Light)<input
+              type="radio"
+              name="theme"
+              id="magpie-light"
+              value="magpie-light"
+          /></label>
+          <label for="goldfinch" data-theme="goldfinch"
+            ><img
+              src="../images/european-goldfinch.jpg"
+              alt="Small bird with shocking pops of yellow on wing feathers and red on face."
+              loading="lazy" />European Goldfinch<input
+              type="radio"
+              name="theme"
+              id="goldfinch"
+              value="goldfinch"
+          /></label>
+          <label for="robin" data-theme="robin"
+            ><img
+              src="../images/robin.jpg"
+              alt="A small, round brown bird, the breast more orange than red."
+              loading="lazy" />Robin<input
+              type="radio"
+              name="theme"
+              id="robin"
+              value="robin"
+          /></label>
+          <label for="sparrow" data-theme="sparrow"
+            ><img
+              src="../images/house-sparrow.jpg"
+              alt="Small brown and white bird with black beak and throat."
+              loading="lazy" />House Sparrow<input
+              type="radio"
+              name="theme"
+              id="sparrow"
+              value="sparrow"
+          /></label>
+          <label for="pigeon" data-theme="pigeon"
+            ><img
+              src="../images/wood-pigeon.jpg"
+              alt="Medium-large bird with soft gray-blue head, white accents, and a rosy brown breast."
+              loading="lazy" />Wood Pigeon<input
+              type="radio"
+              name="theme"
+              id="pigeon"
+              value="pigeon"
+          /></label>
+          <label for="blue-tit" data-theme="blue-tit"
+            ><img
+              src="../images/blue-tit.jpg"
+              alt="Small blue and white bird with a bright yellow breast."
+              loading="lazy" />Blue Tit<input
+              type="radio"
+              name="theme"
+              id="blue-tit"
+              value="blue-tit"
+          /></label>
+          <label for="blackbird" data-theme="blackbird"
+            ><img
+              src="../images/blackbird.jpg"
+              alt="Medium sized bird with all-black feathers, an orange beak, and pale yellow eyes."
+              loading="lazy" />Blackbird<input
+              type="radio"
+              name="theme"
+              id="blackbird"
+              value="blackbird"
+          /></label>
+        </fieldset>
+        <input type="submit" value="Update theme" />
+      </form>
+    </dialog>
+    <header class="top-bar">
+      <button
+        id="garden-bird-themes__dialog-open-button"
+        class="top-bar__theme-dialog-button"
+      >
+        <svg
+          class="top-bar__icon"
+          height="34"
+          version="1.1"
+          viewBox="0 0 1200 1200"
+          width="34"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Garden Bird Themes</title>
+          <path
+            fill="currentColor"
+            d="m200.52 655.86s-82.129-115.2-78.18-171.27c9.7852-138.99-15.094-136-90.828-136.86 13.988-30.004 45.918-29.043 66.824-39.496 18.094-9.0469 38.793-26.309 71.609-25.973 80.27 0.8125 93.887 101.7 132.17 140.61 38.289 38.914 482.66 201.1 470.75 221.41-11.906 20.312-138.34-6.6562-138.34-6.6562s481.33 130.43 517.02 137.12c35.691 6.6953 11.031 67.262-36.711 54.969-47.738-12.293-525.48-155.43-525.48-155.43l-113.46 20.676-160.04 183.63s113.08 36.934 71.273 35.996c-41.805-0.94141-211.86 8.457-176.62-1.4102 35.234-9.8633 77.98-19.727 87.844-39.926 9.8633-20.199 46.977-68.586 48.387-79.391 1.4102-10.805-95.598-92.695-95.598-92.695s78.676 38.93 105.46 37.734c41.086-1.832 55.348-36.227 60.676-65.957 5.3242-29.73 2.2344-32.816 2.2344-32.816s-183.82-3.8945-194.27-67.848c-9.0195-55.238 24.676-58.359 60.621-40.609 35.941 17.75 86.988 28.211 120.27 32.645 33.281 4.4375-65.828-40.902-95.559-67.523-29.73-26.625-84.156-46.508-105.41-29.297-54.152 43.871-4.6406 188.36-4.6406 188.36z"
+          />
+        </svg>
+      </button>
+      <a href="./" class="top-bar__link">All Posts</a>
+    </header>
+    <article class="h-entry | flow">
+      <header class="container container--xl flow">
+        <h1 class="p-name">ffconf 2025</h1>
+        <p>
+          Published
+          <time class="dt-published" datetime="2026-02-27">February 27, 2026</time>
+          by
+          <a class="p-author h-card" href="https://maureenholland.ca/"
+            >Maureen Holland</a
+          >
+        </p>
+      </header>
+      <main class="e-content | container flow">
+        <p>All conferences should have an ice cream break before the final block of talks. I mean, I had a lot of takeaways from ffconf 2025, but that feels like the headliner.</p>
+        <p>Subjective talk notes below, but you can find the  <a href="https://www.youtube.com/playlist?list=PLXmT1r4krsTo5KtThq4dATD_ctsV8mdJQ">full playlist on YouTube</a>.</p>
+        <h2>Bias in our products: The case for diversity in tech, <a href="https://2025.ffconf.org/hellen" rel="external">Hellen Ward</a></h2>
+        <blockquote>Nobody in that team set out with the intention of making a racist soap dispenser.</blockquote>
+        <p>I had missed the <a href="https://www.youtube.com/watch?v=YJjv_OeiHmo" rel="external">racist soap dispenser video</a>, but of course this exists. Quite frankly, intentions when building are meaningless to the person trying to use the thing we built. The impact is what matters. Diversity in our teams is a way to root out unconscious bias and build better products.</p>
+        <p>Hellen also provided a whirlwind tour of diversity in tech’s history, if you want to go down a Wikipedia rabbit hole:</p>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Ada_Lovelace" rel="external">Ada Lovelace</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Women_in_Bletchley_Park" rel="external">Bletchley Park Codebreakers</a></li>
+            <li>ENIAC programmers: <a href="https://en.wikipedia.org/wiki/Jean_Bartik" rel="external">Jean Jennings</a>, <a href="https://en.wikipedia.org/wiki/Marlyn_Wescoff" rel="external">Marlyn Wescoff</a>, <a href="https://en.wikipedia.org/wiki/Ruth_Lichterman" rel="external">Ruth Lichterman</a>, <a href="https://en.wikipedia.org/wiki/Betty_Snyder" rel="external">Betty Snyder</a>, <a href="https://en.wikipedia.org/wiki/Frances_Bilas" rel="external">Frances Bilas</a>, and <a href="https://en.wikipedia.org/wiki/Kay_McNulty" rel="external">Kay McNulty</a>.
+</li>
+            <li><a href="https://en.wikipedia.org/wiki/Grace_Hopper" rel="external">Grace Hopper</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Clarence_Ellis_(computer_scientist)" rel="external">Dr. Clarence "Skip" Ellis</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)" rel="external">Margaret Hamilton</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)" rel="external">Mary Jackson</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Evelyn_Boyd_Granville" rel="external">Evelyn Boyd Grenville</a></li>
+        </ul>
+        <h2>Powerless by Design, <a href="https://chetbox.com/" rel="external">Chetan Padia</a></h2>
+        <blockquote>How does a company that offers a vast range of services for nothing have a multi-billion dollar revenue stream?</blockquote>
+        <picture>
+          <source
+            srcset="
+              ../images/ff-google-revenue.jpeg,
+              ../images/ff-google-revenue-high-res.jpeg 2x
+            "
+            type="image/jpeg"
+          />
+          <img
+            width="600"
+            height="328"
+            loading="lazy"
+            src="../images/ff-google-revenue.jpeg"
+            alt="Bar chart of Google revenue on the left: over 100 billion dollars in last three months. On the right, text reads 'Cost to me'. Underneath is a meme of Maria from Sound of Music with her arms widespread in the mountains. Text over the image is 'Look it’s nothing'."
+          />
+        </picture>
+        <p>It is not easy to de-Google and de-Meta your life at this point. But if you can, go for it. I think I’ve finally reached my tipping point with gmail*. We are paying for them with our data and ever more invasive (and divisive) targeting.</p>
+        <p>Chetan had a helpful list of things to look for in your choice of future digital products:</p>
+        <ul>
+            <li>clear business model</li>
+            <li>privacy-first</li>
+            <li>built on open standards</li>
+            <li>easy to switch</li>
+        </ul>
+        <p><small>*Looking at <a href="https://tuta.com/secure-email" rel="external">Tuta</a> and <a href="https://www.fastmail.com/" rel="external">Fastmail</a>. Let me know if you have other suggestions or tips.</small></p>
+        <h2>An Uncomfortable Place, <a href="https://2025.ffconf.org/hannah" rel="external">Hannah Clarke</a></h2>
+        <p>This is the talk I bought my ticket to see! I wanted to hear the difficult parts of using web components alongside JS frameworks.</p>
+        <p>A no-nuance overview of the trade-offs:</p>
+        <h3>Pros:</h3>
+        <ul>
+            <li>write components once</li>
+            <li>provide framework-specific wrappers (this was a benefit of using the Stencil library)</li>
+            <li>component packages always in sync</li>
+        </ul>
+        <h3>Cons:</h3>
+        <ul>
+            <li>tests and stories needed for each framework</li>
+            <li>things can work perfectly as web components but get buggy once wrapped for React</li>
+            <li>creates friction for JS framework developers wanting to contribute to design system</li>
+        </ul>
+        <p>I wish the path to incorporating web components into JS framework projects was smoother (and maybe with React 19 it is?). But it’s always helpful to get a sense of where the pitfalls lie.</p>
+        <h2>You’re in a Code Cult (And That's OK), <a href="https://2025.ffconf.org/serges" rel="external">Sergès Goma</a></h2>
+        <p>I’m fairly certain Sergès was born on stage. I usually feel a certain amount of anxiety on behalf of the speaker, but was completely at ease during this talk. Somewhat ironic, as Sergès started with an audience quiz to inflame the cult divide lines between us.</p>
+        <p>Javascript vs. Typescript</p>
+        <p>Tailwind vs Semantic CSS</p>
+        <p>You name it, there’s a code cult for it.</p>
+        <p>I learned the term “collective narcissism,” which is when a group can display traits of narcissism (even if none of the individuals are narcissistic). This behaviour can “inspire intergroup aggression.”</p>
+        <p>In a positive spin, Sergès noted, these conflicts come out of being passionate about our tools and craft. When constructive, this criticism is what motivates us to move forward and create new things.</p>
+        <h2>Don’t be an Idiot, <a href="https://2025.ffconf.org/asim" rel="external">Asim Hussain</a></h2>
+        <p>Did I expect to hear about the <a href="https://en.wikipedia.org/wiki/Eleusinian_Mysteries" rel="external">Eleusinian mysteries</a> and theories of consciousness? No. Did I expect this talk to ultimately tie into the possibility LLMs could lead us into a more participatory democracy? Hell no.</p>
+        <p>And yet...</p>
+        <p>Asim made the excellent point that there is huge power not only in having a vote, but in setting the agenda for that vote. What if more people could have their voices heard during that agenda-setting process?</p>
+        <p>Taiwan is exploring a new model of how this could work:</p>
+        <blockquote>Launched in 2014, <a href="https://info.vtaiwan.tw/" rel="external">vTaiwan</a> is a decentralized open consultation process that combines online and offline interactions, bringing together Taiwan’s citizens and government to deliberate on national issues.</blockquote>
+        <p>vTaiwan uses a tool called <a href="https://github.com/compdemocracy/polis" rel="external">pol.is</a>, “an AI powered sentiment gathering platform.” This tool helps analyze and shape large-scale, free-form public feedback into “rough consensus.”</p>
+        <p>It’s one of the only times I’ve heard of an LLM application that actually makes sense. LLMs quickly find patterns in large sets of unstructured data. Having more voices serve as the basis of a more nuanced group of options on complex issues sounds interesting.</p>
+        <p>Obviously, one of the issues with this application is it would be a fairly black box process. How could you guard against bias and manipulation of models? Additionally David Bushell lays out a good overview of why the <a href="https://dbushell.com/ai/#morals-and-ethics" rel="external">Morals and Ethics of AI use</a> in general remain problematic.</p>
+        <h2>AI Forgetting Machines, <a href="https://2025.ffconf.org/jessica-eda" rel="external">Jessica Rose & Eda Eren</a></h2>
+        <blockquote>You cannot maintain code you do not understand.</blockquote>
+        <p>On a biological level, learning is about creating or strengthening neural pathways.</p>
+        <p>At a high level, this learning can be described in two ways:</p>
+        <ul>
+            <li><strong>Declarative</strong>: recall access, ability to describe something you’ve encountered before.</li>
+            <li><strong>Procedural</strong>: deep knowledge, ability to draw on skills to create something.</li>
+        </ul>
+        <p>Procedural learning is what we want to foster in our junior developers. It takes longer and requires friction, the opposite of what LLM code generators offer.</p>
+        <p>Jessica and Eda wanted to emphasize the importance of building in learning experiences at work.</p>
+        <p>Managers have the most control over this. Make sure your developers have time to learn things deeply, not just move tickets across a JIRA board. Once given that time, developers can still use LLMs, but are able to slow down and question the output.</p>
+        <p>This time for procedural learning is vital to produce maintainable code and preserve a pipeline to senior developers.</p>
+        <h2>Six to Sixteen: A Child’s Programming Journey, <a href="https://gearsco.de/" rel="external">Surya Rose</a></h2>
+        <blockquote>Make something useless that you enjoy.</blockquote>
+        <p>This was a very heartening look at a young programmer’s journey from personal projects to open-source contribution.</p>
+        <p>Surya followed his interests to work on his own games and programming language. Through those projects, he developed an incredible range of skills and problem-solving approaches.</p>
+        <p>His first open-source contribution was stressful. It was difficult to figure out where to start in the huge codebase. And no one enjoys getting scrutinized in code review.</p>
+        <p>His second open-source contribution went much smoother. He worked on a newer project with a smaller codebase. Their docs were great and the code review was a good experience. Surya kept contributing and eventually became a core team member.</p>
+        <p>It was nice to hear him credit the “useless” work he had done in preparing him for open-source work. This echoes a point made in the previous talk: not everything we do has to be “useful” in itself. The act of doing it is useful.</p>
+        <h2>The Good Internet: How Fandom Can Reclaim the Web, <a href="https://www.sachajudd.com/" rel="external">Sacha Judd</a></h2>
+        <blockquote>Curiousity, exploration, and discovery still matter.</blockquote>
+        <p>Sacha talked about transformative fandom throughout the history of the internet. Communal spaces grew where fans could debate and create art or stories about the books, shows, and characters they loved.</p>
+        <p>She noted the shift from actively “surfing” the net to passively receiving it on a “platform.”</p>
+        <p>This talk was a call to reconsider “how, what, and where we consume online.” She suggested a few foundational points for how to build healthy online communities:</p>
+        <ul>
+            <li>persistent archives</li>
+            <li>transparent governance</li>
+            <li>layered privacy</li>
+            <li>federation and portability</li>
+        </ul>
+        <h2>Wrapping up</h2>
+        <picture>
+          <source
+            srcset="
+              ../images/ff-welcome-to-ffconf.jpeg,
+              ../images/ff-welcome-to-ffconf-high-res.jpeg 2x
+            "
+            type="image/jpeg"
+          />
+          <img
+            width="600"
+            height="300"
+            loading="lazy"
+            src="../images/ff-welcome-to-ffconf.jpeg"
+            alt="Theatre screen reads 'Welcome. Grab a seat. Get comfortable for ffconf 2025. Day sponsor: Mirus.' There's a sidebar with live posts from Bluesky. Audience sits in plushy red seats."
+          />
+        </picture>
+        <p><a href="https://remysharp.com/" rel="external">Remy Sharp</a> & Co. have been running ffconf for a while and everything seemed to run very smoothly. I was genuinely delighted by the ice cream break. Perfectly timed. An energizing way to end my run of conferences in 2025. And it’s all coming full circle with a return to State of the Browser tomorrow.</p>
+        <h3>More community conferences! (Buy tickets early)</h3>
+        <ul>
+            <li><a href="https://2026.stateofthebrowser.com/" rel="external">State of the Browser, February 28, 2026</a></li>
+            <li><a href="https://webdayout.com/" rel="external">Web Day Out, March 12, 2026</a></li>
+            <li><a href="https://beyondtellerrand.com/events/dusseldorf-2026" rel="external">Beyond Tellerrand, April 27 & 28, 2026</a></li>
+            <li><a href="https://pixelpioneers.co/" rel="external">Pixel Pioneers, June 19, 2026</a></li>
+        </ul>
+      </main>
+    </article>
+    <footer>
+      <a rel="me" href="https://hachyderm.io/@maureenholland">Mastodon </a>
+      <a href="./feed.xml">RSS</a>
+    </footer>
+    <script src="../scripts/garden-bird-themes.js"></script>
+  </body>
+</html>
