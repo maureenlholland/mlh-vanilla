@@ -114,5 +114,12 @@
             <pubDate>Mon, 29 Jun 2026 12:00:00 GMT</pubDate>
             <description>I bought this book after seeing an interview Gary Stevenson did with the author, economist Gabriel Zucman. I recommend both the book and the interview.</description>
         </item>
+        <item>
+            <title>Ten Years</title>
+            <link>https://maureenholland.ca/magpie/ten-years</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/ten-years</guid>
+            <pubDate>Wed, 29 Jul 2026 12:00:00 GMT</pubDate>
+            <description>So long, and thanks for all the fish! The end of an unexpected career in web development.</description>
+        </item>
     </channel>
 </rss>
