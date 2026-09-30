@@ -121,5 +121,12 @@
             <pubDate>Wed, 29 Jul 2026 12:00:00 GMT</pubDate>
             <description>So long, and thanks for all the fish! The end of an unexpected career in web development.</description>
         </item>
+        <item>
+            <title>Re-reading</title>
+            <link>https://maureenholland.ca/magpie/re-reading</link>
+            <guid isPermaLink="true">https://maureenholland.ca/magpie/re-reading</guid>
+            <pubDate>Wed, 30 Sep 2026 12:00:00 GMT</pubDate>
+            <description>I remember the exact moment I knew I was hooked by Donna Tartt’s 864-page novel, The Goldfinch. It was the first line of the second chapter: “Things would have turned out better if she had lived.”</description>
+        </item>
     </channel>
 </rss>
